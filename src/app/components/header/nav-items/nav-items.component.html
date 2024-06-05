@@ -1,0 +1,66 @@
+<!-- Inventory -->
+<button class="menu-title" mat-button [matMenuTriggerFor]="inventoryMenu">Inventory</button>
+<mat-menu #inventoryMenu="matMenu">
+  <button routerLinkActive="active" routerLink="/item" mat-menu-item>Items</button>
+  <button routerLinkActive="active" routerLink="/request" mat-menu-item>Requests</button>
+  <button routerLinkActive="active" routerLink="/approveditems" mat-menu-item>Approved Requests</button>
+  <button routerLinkActive="active" routerLink="/deliveritems" mat-menu-item>Deliver Items</button>
+  <button routerLinkActive="active" routerLink="/purchaseorder" mat-menu-item>Purchase Orders</button>
+  <button routerLinkActive="active" routerLink="/openpurchaseorders" mat-menu-item>Receive Items</button>
+  <button routerLinkActive="active" routerLink="/receiving" mat-menu-item>Receivings</button>
+  <button routerLinkActive="active" routerLink="/restockunit" mat-menu-item>Restock Units</button>
+  <button routerLinkActive="active" routerLink="/stockrequest" mat-menu-item>Stock Requests</button>
+</mat-menu>
+<!-- Settings -->
+<button class="menu-title" mat-button [matMenuTriggerFor]="settingsMenu">Settings</button>
+<mat-menu #settingsMenu="matMenu">
+  <button routerLinkActive="active" routerLink="/myprofile" mat-menu-item>My Profile</button>
+  <button routerLinkActive="active" routerLink="/company" mat-menu-item>Company</button>
+  <button routerLinkActive="active" routerLink="/users" mat-menu-item>Users</button>
+  <button routerLinkActive="active" routerLink="/userroles" mat-menu-item>User Roles</button>
+  <button routerLinkActive="active" routerLink="/departments" mat-menu-item>Departments</button>
+  <button routerLinkActive="active" routerLink="/approvalgroups" mat-menu-item>Approval Groups</button>
+  <button routerLinkActive="active" routerLink="/locations" mat-menu-item>Locations</button>
+  <button routerLinkActive="active" routerLink="/vendors" mat-menu-item>Vendors</button>
+  <button routerLinkActive="active" routerLink="/glaccounts" mat-menu-item>GL Accounts</button>
+  <button routerLinkActive="active" routerLink="/categories" mat-menu-item>Categories</button>
+</mat-menu>
+<!-- Billing -->
+<button class="menu-title" mat-button [matMenuTriggerFor]="billingMenu">Billing</button>
+<mat-menu #billingMenu="matMenu">
+  <button routerLinkActive="active" routerLink="/billing" mat-menu-item>Billing</button>
+  <button routerLinkActive="active" routerLink="/bills" mat-menu-item>Bills</button>
+  <button routerLinkActive="active" routerLink="/cardcharges" mat-menu-item>Card Charges</button>
+  <button routerLinkActive="active" routerLink="/companyfiles" mat-menu-item>Companies</button>
+  <button routerLinkActive="active" routerLink="/payment" mat-menu-item>Payment Approvals</button>
+  <button routerLinkActive="active" routerLink="/depreciation" mat-menu-item>Depreciation Expenses</button>
+  <button routerLinkActive="active" routerLink="/journal" mat-menu-item>Journals</button>
+  <button routerLinkActive="active" routerLink="/reconciliation" mat-menu-item>Reconciliation</button>
+</mat-menu>
+<!-- Payroll -->
+<button class="menu-title" mat-button [matMenuTriggerFor]="payrollMenu">Payroll</button>
+<mat-menu #payrollMenu="matMenu">
+  <button routerLinkActive="active" routerLink="/payrollchange" mat-menu-item>Payroll Changes</button>
+  <button routerLinkActive="active" routerLink="/uploadtimecard" mat-menu-item>Time Cards</button>
+  <button routerLinkActive="active" routerLink="/employee" mat-menu-item>Employees</button>
+</mat-menu>
+<!-- Reports -->
+<button class="menu-title" mat-button [matMenuTriggerFor]="reportsMenu">Reports</button>
+<mat-menu #reportsMenu="matMenu">
+  <button routerLinkActive="active" routerLink="/salesbyitem" mat-menu-item>Sales By Item</button>
+  <button routerLinkActive="active" routerLink="/itemusagereport" mat-menu-item>Item Usage Report</button>
+  <button routerLinkActive="active" routerLink="/vendorinforeq" mat-menu-item>Vendor Info Req</button>
+  <button routerLinkActive="active" routerLink="/financialreport" mat-menu-item>Financial Report</button>
+  <button routerLinkActive="active" routerLink="/budget" mat-menu-item>Budgets</button>
+  <button routerLinkActive="active" routerLink="/balancesheet" mat-menu-item>Balance Sheet</button>
+  <button routerLinkActive="active" routerLink="/useractivity" mat-menu-item>User Activity</button>
+</mat-menu>
+<!-- Transactions -->
+<button class="menu-title" mat-button [matMenuTriggerFor]="transactionsMenu">Transactions</button>
+<mat-menu #transactionsMenu="matMenu">
+  <button routerLinkActive="active" routerLink="/banking" mat-menu-item>Banking</button>
+  <button routerLinkActive="active" routerLink="/transactions" mat-menu-item>Transactions</button>
+  <button routerLinkActive="active" routerLink="/transaction" fragment="deposit" mat-menu-item>Deposits</button>
+  <button routerLinkActive="active" routerLink="/transaction" fragment="transfer" mat-menu-item>Transfers</button>
+  <button routerLinkActive="active" routerLink="/transaction" fragment="check" mat-menu-item>Checks</button>
+</mat-menu>

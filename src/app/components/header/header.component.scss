@@ -1,0 +1,45 @@
+.mat-toolbar-single-row {
+  padding: 0 24px;
+}
+
+.bg-white {
+  background-color: white;
+}
+
+.dropdown.menu-title::after {
+  content: "";
+  /* TODO Get icon */
+  background-image: url(/assets/icons/down-arrow-icon.png);
+  background-repeat: no-repeat;
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  position: relative;
+  top: 13px;
+  right: -10px;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+.title {
+  
+  color: #1573FF; /* TODO Add primary color */
+  margin-right: 15px;
+  font-weight: bold;
+  font-style: italic;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+}
+
+.profile-wrapper {
+  display: flex;
+  align-items: center;
+  padding-left: 15px;
+  border-left: 1px solid var(--secondary); /* TODO Add secondary color */
+
+  mat-icon {
+    margin-right: 5px;
+  }
+}
