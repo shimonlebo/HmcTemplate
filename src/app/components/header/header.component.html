@@ -1,20 +1,32 @@
-<mat-toolbar class="bg-white">
-  <span class="title" routerLink="/">ePurchase</span>
+<mat-toolbar color="primary">
+  <!-- Toggle sidenav -->
+  <button mat-icon-button (click)="onToggleNavView()">
+    <mat-icon class="material-symbols-outlined">menu_open</mat-icon>
+  </button>
+  <!-- Project name -->
+  <h1 class="title" routerLink="/dashboard">HMCTemplate 1.0</h1>
+  <!-- Company search list  -->
   <app-search-list></app-search-list>
-  <span class="spacer"></span>
+  <!-- Nav items -->
   <app-nav-items></app-nav-items>
-  <!-- <app-comments [localComments]="actions.Comments"></app-comments> -->
-  <div class="profile-wrapper">
-    <!-- TODO Add profile photo -->
-    <mat-icon class="material-symbols-outlined">account_circle</mat-icon>
-    <!-- <img src="/assets/icons/profile-image-icon.png" /> -->
-    <button class="dropdown menu-title" mat-button [matMenuTriggerFor]="profileMenu">
-      Moshe Schwarts
-      <!-- TODO Add users full name -->
-    </button>
-  </div>
+  <!-- Spacer to push profile to right -->
+  <span class="spacer"></span>
+  <!-- Chat -->
+  <button mat-icon-button>
+    <mat-icon class="material-symbols-outlined">chat</mat-icon>
+  </button>
+  <!-- Profile menu button -->
+  <button mat-button [matMenuTriggerFor]="profileMenu">
+    Moshe Schwarts
+  </button>
   <mat-menu #profileMenu="matMenu">
-    <button mat-menu-item routerLinkActive="active" routerLink="">My Profile</button>
-    <button mat-menu-item>Log Out</button>
+    <button mat-menu-item>
+      <mat-icon class="material-symbols-outlined">account_circle</mat-icon>
+      My Profile
+    </button>
+    <button mat-menu-item>
+      <mat-icon class="material-symbols-outlined">logout</mat-icon>
+      Log Out
+    </button>
   </mat-menu>
 </mat-toolbar>

@@ -1,333 +1,204 @@
-<div class="main-content clear-fix" style="min-width: 489px;">
-  <h1 class="main-content-h1">Dashboard</h1>
-  <mat-tab-group class="tab-container">
-    <mat-tab label="{{companyName}}">
-      <div class="outer-dt-container clear-fix">
-        <div class="wrapper">
-          <!--bills table-->
-          <div>
-            <div class="f-th">
-              <div>
-                <b style="font-size: 20px;">BILLS</b>
-                <span style="display: block; font-weight: normal; font-size: 15px;">To be processed</span>
-              </div>
-              <span class="number">101</span>
-            </div>
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item active" aria-current="page">Dashboard</li>
+  </ol>
+</nav>
 
+<mat-tab-group class="tab-container" dynamicHeight>
+  <mat-tab label="{{companyName}}">
+    <mat-grid-list cols="4" gutterSize="1rem">
+      <mat-grid-tile>
+        <div class="card" style="width: 18rem;">
+          <div class="card-body">
+            <h5 class="card-title">Bills</h5>
+            <h6 class="card-subtitle mb-2 text-body-secondary">To be processed.</h6>
+            <table class="table table-sm">
+              <thead>
+                <tr>
+                  <th scope="col">Vendor</th>
+                  <th scope="col">Bill</th>
+                  <th scope="col">Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Mark</td>
+                  <td>Otto</td>
+                  <td>mdo</td>
+                </tr>
+                <tr>
+                  <td>Jacob</td>
+                  <td>Thornton</td>
+                  <td>fat</td>
+                </tr>
+                <tr>
+                  <td>Larry the Bird</td>
+                  <td>twitter</td>
+                  <td>test</td>
+                </tr>
+              </tbody>
+            </table>
+            <small>Showing 8 - 101 of bills</small>
+          </div>
+        </div>  
+      </mat-grid-tile>
+    </mat-grid-list>
+    
+    
+  </mat-tab>
+  <mat-tab label="By Type">
+    <div class="outer-dt-container clear-fix">
+      <div class="wrapper">
+        <!--all comp bills table-->
+        <div>
+          <div class="f-th">
+            <div>
+              <b style="font-size: 20px;">BILLS</b>
+              <span style="display: block; font-weight: normal; font-size: 15px;">To be processed</span>
+            </div>
+            <span class="number">101</span>
+          </div>
+          <table class="table-1">
+            <thead>
+              <tr class="second-th">
+                <th>Company</th>
+                <th style="text-align: center; width: 104px;">Open Bills</th>
+              </tr>
+            </thead>
+          </table>
+          <div class="costom-scroll">
             <table class="table-1">
-              <thead>
-                <tr class="second-th">
-                  <th style="max-width: 91px;">Vendor</th>
-                  <th style="max-width: 138px;">Bill #</th>
-                  <th>Status</th>
+              <tbody>
+                <tr>
+                  <td style="border-left: none;">{{companyName}}</td>
+                  <td style="border-right: none;" class="numbers">101</td>
                 </tr>
-              </thead>
+              </tbody>
             </table>
-
-            <div class="costom-scroll">
-              <table class="table-1">
-                <tbody>
-                  <tr>
-                    <td style="border-left: none; max-width: 91px;">Vendor Name</td>
-                    <td style="max-width: 138px;">#10</td>
-                    <td style="border-right: none;">
-                      <div style="text-align: center;">
-                        <a routerLink=""><button class="btn" type="button">Processed</button></a>
-                      </div>
-                    </td>
-                  </tr>
-
-                </tbody>
-              </table>
-            </div>
-            <p class="results">Showing 1 - 101 of bills</p>
           </div>
-
-          <!--requests table-->
-          <div>
-            <div class="f-th">
-              <div>
-                <b style="font-size: 20px;">REQUESTS</b>
-                <span style="display: block; font-weight: normal; font-size: 15px;">To be processed</span>
-              </div>
-              <span class="number">101</span>
+          <p class="results">Showing 1 - 101 of companies</p>
+        </div>
+        <!--all comp requests table-->
+        <div>
+          <div class="f-th">
+            <div>
+              <b style="font-size: 20px;">REQUESTS</b>
+              <span style="display: block; font-weight: normal; font-size: 15px;">To be processed</span>
             </div>
-            <table class="table-1" id="RequestListTable">
-              <thead>
-                <tr class="second-th">
-                  <th style="max-width: 91px">Request #</th>
-                  <th style="max-width: 138px">User</th>
-                  <th>Status</th>
+            <span class="number">101</span>
+          </div>
+          <table class="table-1">
+            <thead>
+              <tr class="second-th">
+                <th>Company</th>
+                <th style="text-align: center; width: 110px;">Open Requests</th>
+              </tr>
+            </thead>
+          </table>
+          <div class="costom-scroll">
+            <table class="table-1">
+              <tbody>
+                <tr>
+                  <td style="border-left: none;">{{companyName}}</td>
+                  <td style="border-right: none;" class="numbers">101</td>
                 </tr>
-              </thead>
+              </tbody>
             </table>
-            <div class="costom-scroll">
-              <table class="table-1" id="RequestListTable">
-                <tbody>
-                  <tr>
-                    <td style="max-width:91px; border-left: none;">#101</td>
-                    <td style="max-width:138px;">Moshe Schwartz</td>
-                    <td style="border-right: none;">
-                      <div style="text-align: center;">
-                        <a routerLink=""><button class="btn" type="button">Denied</button></a>
-                      </div>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <p class="results">Showing 1 - 101 of requests</p>
           </div>
-
-          <!--po table-->
-          <div>
-            <div class="f-th">
-              <div>
-                <b style="font-size: 20px;">PURCHASE ORDERS</b>
-                <span style="display: block; font-weight: normal; font-size: 15px;">To be processed</span>
-              </div>
-              <span class="number">101</span>
+          <p class="results">Showing 1 - 101 of companies</p>
+        </div>
+        <!--all comp po table-->
+        <div>
+          <div class="f-th">
+            <div>
+              <b style="font-size: 20px;">PURCHASE ORDERS</b>
+              <span style="display: block; font-weight: normal; font-size: 15px;">To be processed</span>
             </div>
-            <table class="table-1" id="POListTable">
-              <thead>
-                <tr class="second-th">
-                  <th style="max-width: 91px;">PO #</th>
-                  <th style="max-width: 138px;">Vendor</th>
-                  <th>Status</th>
+            <span class="number">101</span>
+          </div>
+          <table class="table-1">
+            <thead>
+              <tr class="second-th">
+                <th>Company</th>
+                <th style="text-align: center; width: 110px;">Open POs</th>
+              </tr>
+            </thead>
+          </table>
+          <div class="costom-scroll">
+            <table class="table-1">
+              <tbody>
+                <tr>
+                  <td style="border-left: none;">{{companyName}}</td>
+                  <td style="border-right: none;" class="numbers">101</td>
                 </tr>
-              </thead>
+              </tbody>
             </table>
-            <div class="costom-scroll">
-              <table class="table-1" id="POListTable">
-                <tbody>
-                  <tr>
-                    <td style="max-width: 91px; border-left: none;">#101</td>
-                    <td style="max-width: 138px;">Simon Lebovits</td>
-                    <td style="border-right: none;">
-                      <div style="text-align: center;">
-                        <a routerLink=""><button class="btn" type="button">Pending</button></a>
-                      </div>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <p class="results">Showing 1 - 101 of purchase orders</p>
           </div>
-
-          <!--Banks table-->
-          <div>
-            <div class="f-th">
-              <div>
-                <b style="font-size: 20px;">BANK ACCOUNTS</b>
-                <span style="display: block; font-weight: normal; font-size: 15px;">Totals</span>
-              </div>
-              <span class="number">101</span>
-            </div>
-
-            <table class="table-1" id="POListTable">
-              <thead>
-                <tr class="second-th">
-                  <th>Account</th>
-                  <th style="width: 105px;">Total</th>
-                  <th></th>
-                </tr>
-              </thead>
-            </table>
-
-            <div class="costom-scroll">
-              <table class="table-1" id="POListTable">
-                <tbody>
-                  <tr>
-                    <td style="max-width: 200px; border-left: none;">Chase Bank</td>
-                    <td style="border-right: none;">1.2-2</td>
-                    <td routerLinkActive="active" routerLink=""><span title="View Transactions"
-                        class="td-duplicate"></span></td>
-                  </tr>
-                  <!-- TODO Create reusable empty table row component -->
-                </tbody>
-              </table>
-            </div>
-            <p class="results">Showing 1 - 101 of bank accounts</p>
-          </div>
+          <p class="results">Showing 1 - 101 of companies</p>
         </div>
       </div>
-    </mat-tab>
-    <mat-tab label="By Type">
-      <div class="outer-dt-container clear-fix">
-        <div class="wrapper">
-          <!--all comp bills table-->
-          <div>
-            <div class="f-th">
-              <div>
-                <b style="font-size: 20px;">BILLS</b>
-                <span style="display: block; font-weight: normal; font-size: 15px;">To be processed</span>
-              </div>
-              <span class="number">101</span>
-            </div>
-            <table class="table-1">
-              <thead>
-                <tr class="second-th">
-                  <th>Company</th>
-                  <th style="text-align: center; width: 104px;">Open Bills</th>
-                </tr>
-              </thead>
-            </table>
-            <div class="costom-scroll">
-              <table class="table-1">
-                <tbody>
-                  <tr>
-                    <td style="border-left: none;">{{companyName}}</td>
-                    <td style="border-right: none;" class="numbers">101</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <p class="results">Showing 1 - 101 of companies</p>
-          </div>
-          <!--all comp requests table-->
-          <div>
-            <div class="f-th">
-              <div>
-                <b style="font-size: 20px;">REQUESTS</b>
-                <span style="display: block; font-weight: normal; font-size: 15px;">To be processed</span>
-              </div>
-              <span class="number">101</span>
-            </div>
-            <table class="table-1">
-              <thead>
-                <tr class="second-th">
-                  <th>Company</th>
-                  <th style="text-align: center; width: 110px;">Open Requests</th>
-                </tr>
-              </thead>
-            </table>
-            <div class="costom-scroll">
-              <table class="table-1">
-                <tbody>
-                  <tr>
-                    <td style="border-left: none;">{{companyName}}</td>
-                    <td style="border-right: none;" class="numbers">101</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <p class="results">Showing 1 - 101 of companies</p>
-          </div>
-          <!--all comp po table-->
-          <div>
-            <div class="f-th">
-              <div>
-                <b style="font-size: 20px;">PURCHASE ORDERS</b>
-                <span style="display: block; font-weight: normal; font-size: 15px;">To be processed</span>
-              </div>
-              <span class="number">101</span>
-            </div>
-            <table class="table-1">
-              <thead>
-                <tr class="second-th">
-                  <th>Company</th>
-                  <th style="text-align: center; width: 110px;">Open POs</th>
-                </tr>
-              </thead>
-            </table>
-            <div class="costom-scroll">
-              <table class="table-1">
-                <tbody>
-                  <tr>
-                    <td style="border-left: none;">{{companyName}}</td>
-                    <td style="border-right: none;" class="numbers">101</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <p class="results">Showing 1 - 101 of companies</p>
-          </div>
-        </div>
-      </div>
-    </mat-tab>
-    <mat-tab label="By Company">
-      <mat-accordion multi="true">
-        @if (loadData) {
-        <div>Loading...</div>
-        }
-        @else {
-        <mat-expansion-panel hideToggle="false">
-          <!-- Header -->
-          <mat-expansion-panel-header>
-            <mat-panel-title>
-              <a>{{companyName}}</a>
-            </mat-panel-title>
-            <mat-panel-description>
-              <span style="margin-right: 20px;">
-                <strong>
-                  <a href="#" target="_blank" style="text-decoration: none; color: rgba(0,0,0,.54)">My To Do Bills:</a>
-                </strong>
-                <span style="padding-left: 15px;">101</span>
-              </span>
-              <span style="margin-right: 20px;">
-                <strong>
-                  <a href="#" target="_blank" style="text-decoration: none; color: rgba(0,0,0,.54)">Open Bills:</a>
-                </strong>
-                <span style="padding-left: 15px;">101</span>
-              </span>
-              <span style="margin-right: 20px;">
-                <strong>Requests:</strong>
-                <span style="padding-left: 15px;">101</span>
-              </span>
-              <span style="margin-right: 20px;">
-                <strong>Purchase Orders:</strong>
-                <span style="padding-left: 15px;">101</span>
-              </span>
-            </mat-panel-description>
-          </mat-expansion-panel-header>
-          <!-- Content (Lazy Loading) -->
-          <ng-template matExpansionPanelContent>
-            <p><strong>Bank Accounts</strong></p>
-            <div class="cards-grid-container">
-              <mat-card>
-                <mat-card-title>Chase Bank</mat-card-title>
-                <mat-card-subtitle>$101</mat-card-subtitle>
-              </mat-card>
-            </div>
-          </ng-template>
-        </mat-expansion-panel>
-        }
-      </mat-accordion>
-    </mat-tab>
-    <mat-tab label="Payroll Issues">
-      <mat-accordion multi="true">
-        @if (loadData) {
-        <div>Loading...</div>
-        }
-        @else {
-        <mat-expansion-panel [class.disable-panel-header-pointer-events]="true" [expanded]="false" hideToggle="true">
-          <mat-expansion-panel-header>
-            <mat-panel-title>
-              <a>{{companyName}}</a>
-            </mat-panel-title>
-            <mat-panel-description>
-              <span style="margin-right: 20px;">
-                <strong>PTO From PTO Report:</strong> <span style="padding-left: 15px;">1.2-2</span>
-              </span>
-              <span style="margin-right: 20px;">
-                <strong>PTO From Balance Sheet:</strong> <span style="padding-left: 15px;">1.2-2</span>
-              </span>
-              <span style="margin-right: 20px;">
-                <strong>Sick From PTOReport:</strong> <span style="padding-left: 15px;">1.2-2</span>
-              </span>
-              <span style="margin-right: 20px;">
-                <strong>Sick From Balance Sheet:</strong> <span style="padding-left: 15px;">1.2-2</span>
-              </span>
-              <span style="margin-right: 20px;">
-                <strong><a class="a-process" href="#" target="_blank" style="color: rgba(0,0,0,.54)">Go To
-                    Page</a></strong> <span style="padding-left: 15px;"></span>
-              </span>
-            </mat-panel-description>            
-          </mat-expansion-panel-header>
-        </mat-expansion-panel>
-        }
-      </mat-accordion>
-    </mat-tab>
-  </mat-tab-group>
-</div>
+    </div>
+  </mat-tab>
+  <mat-tab label="By Company">
+    <mat-accordion>
+      <mat-expansion-panel hideToggle>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            This is the expansion title
+          </mat-panel-title>
+          <mat-panel-description>
+            This is a summary of the content
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+        <p>This is the primary content of the panel.</p>
+      </mat-expansion-panel>
+      <mat-expansion-panel (opened)="panelOpenState = true"
+                           (closed)="panelOpenState = false">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Self aware panel
+          </mat-panel-title>
+          <mat-panel-description>
+            Currently I am {{panelOpenState ? 'open' : 'closed'}}
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+        <p>I'm visible because I am open</p>
+      </mat-expansion-panel>
+    </mat-accordion>   
+    
+  </mat-tab>
+  <mat-tab label="Payroll Issues">
+    <mat-accordion multi="true">
+      @if (loadData) {
+      <div>Loading...</div>
+      }
+      @else {
+      <mat-expansion-panel [class.disable-panel-header-pointer-events]="true" [expanded]="false" hideToggle="true">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <a>{{companyName}}</a>
+          </mat-panel-title>
+          <mat-panel-description>
+            <span style="margin-right: 20px;">
+              <strong>PTO From PTO Report:</strong> <span style="padding-left: 15px;">1.2-2</span>
+            </span>
+            <span style="margin-right: 20px;">
+              <strong>PTO From Balance Sheet:</strong> <span style="padding-left: 15px;">1.2-2</span>
+            </span>
+            <span style="margin-right: 20px;">
+              <strong>Sick From PTOReport:</strong> <span style="padding-left: 15px;">1.2-2</span>
+            </span>
+            <span style="margin-right: 20px;">
+              <strong>Sick From Balance Sheet:</strong> <span style="padding-left: 15px;">1.2-2</span>
+            </span>
+            <span style="margin-right: 20px;">
+              <strong><a class="a-process" href="#" target="_blank" style="color: rgba(0,0,0,.54)">Go To
+                  Page</a></strong> <span style="padding-left: 15px;"></span>
+            </span>
+          </mat-panel-description>            
+        </mat-expansion-panel-header>
+      </mat-expansion-panel>
+      }
+    </mat-accordion>
+  </mat-tab>
+</mat-tab-group>

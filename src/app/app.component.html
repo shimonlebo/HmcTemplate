@@ -1,3 +1,19 @@
-<app-main>
+@if (isLoggedOut) {
   <router-outlet />
-</app-main> 
+}
+@else {
+  @if (!showHeaderNav) {
+    <app-sidenav (showHeader)="toggleHeader()">
+      <div class="content">
+        <router-outlet />
+      </div>
+    </app-sidenav>
+  }
+  @else {
+    <!-- TODO show sidenav on mobile -->
+    <app-header (toggleNavView)="toggleHeader()"></app-header> 
+    <div class="content">
+      <router-outlet />
+    </div>
+  } 
+}

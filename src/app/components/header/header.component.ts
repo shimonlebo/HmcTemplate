@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output, inject } from '@angular/core';
+import { Component, EventEmitter, Output, inject, output } from '@angular/core';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -7,6 +7,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { SearchListComponent } from './search-list/search-list.component';
 import { NavItemsComponent } from './nav-items/nav-items.component';
 import { AsyncPipe } from '@angular/common';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -18,11 +19,17 @@ import { AsyncPipe } from '@angular/common';
     MatIconModule,
     SearchListComponent,
     NavItemsComponent,
-    AsyncPipe
+    AsyncPipe,
+    RouterModule
   ],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
+  showSidenav = output();
+
+  onToggleNavView() {
+    this.showSidenav.emit();
+  }
 
 }

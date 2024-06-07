@@ -1,35 +1,27 @@
-import { Component, inject, Input } from '@angular/core';
+import { Component, inject, output } from '@angular/core';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { AsyncPipe } from '@angular/common';
 import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
-import { MatIconModule } from '@angular/material/icon';
-import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { Observable } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
-import { HeaderComponent } from '../components/header/header.component';
 
 @Component({
-  selector: 'app-main',
-  templateUrl: './main.component.html',
-  styleUrl: './main.component.scss',
+  selector: 'app-sidenav',
   standalone: true,
   imports: [
-    MatToolbarModule,
-    MatButtonModule,
-    MatSidenavModule,
-    MatSlideToggleModule,
-    MatListModule,
-    MatIconModule,
     AsyncPipe,
-    HeaderComponent
-  ]
+    MatSidenavModule,
+    MatToolbarModule,
+    MatListModule
+  ],
+  templateUrl: './sidenav.component.html',
+  styleUrl: './sidenav.component.scss'
 })
-export class MainComponent {
-  @Input() useHeaderAsNav: boolean = false;
-  
+export class SidenavComponent {
+  showHeader = output();
+
   private breakpointObserver = inject(BreakpointObserver);
 
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
@@ -37,4 +29,8 @@ export class MainComponent {
       map(result => result.matches),
       shareReplay()
     );
+
+  onShowHeader() {
+    this.showHeader.emit();
+  }
 }

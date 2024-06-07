@@ -1,35 +1,18 @@
-<div class="main-wrapper">
-  <div class="company-wrapper">
-    <button class="primary-btn" (click)="isOpened = !isOpened">
-      <img src="/assets/icons/white-companies-icon.png" />
-      <span>{{companyName}}</span>
-      <img src="/assets/icons/white-dropdown-arrow-icon.png" />
-    </button>
-
-    @if (isOpened) {
-    <div class="content-wrapper shadow">
-      <div class="static-search">
-        <div class="search-bar">
-          <input type="search" class="form-control" placeholder="Search" />
-        </div>
-      </div>
-      <!-- Add @if to show filtered companies -->
-      <ul>
-        <!-- Add @for loop -->
-        <li (click)="isOpened = false">
-          Company 1
-        </li>
-      </ul>
-    </div>
-    }
-  </div>
-
-  <!-- Left button -->
-  <button class="next-btn">
-    <img src="/assets/icons/left-arrow-muted-icon.png" />
+<div class="d-flex">
+  <button mat-button (click)="isOpened = !isOpened" [matMenuTriggerFor]="companyMenu">
+    <mat-icon class="material-symbols-outlined">apartment</mat-icon>
+    <span>{{companyName}}</span>
+    <!-- <mat-icon>keyboard_arrow_down</mat-icon> -->
   </button>
-  <!-- Right button -->
-  <button class="next-btn">
-    <img src="/assets/icons/right-primary-arrow-icon.png" />
+
+  <mat-menu #companyMenu="matMenu">
+    <button mat-menu-item>Items</button>
+  </mat-menu>
+
+  <button mat-icon-button>
+    <mat-icon class="material-symbols-outlined">chevron_left</mat-icon>
+  </button>
+  <button mat-icon-button>
+    <mat-icon class="material-symbols-outlined">chevron_right</mat-icon>
   </button>
 </div>
