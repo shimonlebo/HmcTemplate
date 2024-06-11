@@ -1,7 +1,22 @@
-mat-tab-group {
-  flex: 1;
+::ng-deep .mat-mdc-tab-labels {
+  justify-content: center;
+}
+
+::ng-deep .mat-mdc-tab.mdc-tab {
+  flex-grow: 0 !important;
+  min-width: 200px;
+}
+
+/* Prevents tab labels from stretching */
+.mat-tab-labels {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+}
+
+/* Ensures each tab label fits its content */
+.mat-tab-label {
+  flex: 0 1 auto;
+  width: fit-content;
 }
 
 .mat-tab-body-wrapper {
@@ -15,4 +30,147 @@ mat-tab-group {
   flex: 1;
   overflow-y: auto;
   padding: 16px; /* Add padding if needed */
+}
+
+.bills-card {
+  width: 100%;
+  max-width: 400px;
+  margin: 20px auto;
+}
+
+.header-content {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 15px;
+}
+
+.bill-count {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+table {
+  width: 100%;
+}
+
+.status-denied {
+  color: white;
+  background-color: #dc3545;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.status-pending {
+  color: white;
+  background-color: #005cbb;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.footer {
+  margin-top: 10px;
+  color: #666;
+  padding: 0 16px;
+  font-size: smaller;
+}
+
+.mat-header-row {
+  position: sticky;
+  top: 0;
+  z-index: 10; /* ensure the header is above other content */
+  background-color: #fff; /* match the background to your table/card theme */
+}
+
+.mat-mdc-card-content {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.scrollable-content {
+  max-height: 212px; /* Adjust based on your needs */
+  overflow-y: auto;
+}
+
+/* Custom Scrollbar styles */
+.scrollable-content::-webkit-scrollbar {
+  width: 3px;
+}
+
+.scrollable-content::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.scrollable-content::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 5px;
+}
+
+.scrollable-content::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.card {
+  max-width: 400px;
+}
+
+.card-header {
+  font-size: 14px;
+  padding: 15px 20px;
+}
+
+td, th {
+  text-wrap: nowrap;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 150px;
+}
+
+th {
+  background-color: #edf1f7 !important;
+  font-weight: 500;
+}
+
+th:first-child, td:first-child {
+  padding-left: 20px;
+}
+
+th:last-child, td:last-child {
+  padding-right: 20px;
+}
+
+.card-footer {
+  background-color: white;
+  border-top: 0;
+  font-size: small;
+  padding: 15px 20px;
+}
+
+.table {
+  margin-bottom: 0; /* Remove bottom margin from table */
+}
+
+.badge {
+  padding: 0.5em 0.75em;
+  font-weight: inherit;
+}
+
+.table-responsive {
+  max-height: 211px; /* Adjust based on your needs */
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.sticky-top {
+  position: sticky;
+  top: 0; /* Ensure the header sticks to the top of the scrollable area */
+  z-index: 1020; /* Above fixed elements but below modal overlays */
+}
+
+.mat-mdc-table thead {
+  position: sticky;
+  top: 0;
+  z-index: 1020;
 }
