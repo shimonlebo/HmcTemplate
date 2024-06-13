@@ -1,3 +1,5 @@
+@use '../../../styles/custom-colors' as colors;
+
 @mixin text-ellipsis($max-width) {
   text-wrap: nowrap;
   white-space: nowrap;
@@ -77,15 +79,15 @@ th:last-child, td:last-child {
 }
 
 .status-denied {
-  @include status(white,#dc3545);
+  @include status(white,colors.$danger);
 }
 
 .status-pending {
-  @include status(white,#005cbb);
+  @include status(white,colors.$primary);
 }
 
 .status-approved {
-  @include status(white,green);
+  @include status(white,colors.$success);
 }
 
 .footer {

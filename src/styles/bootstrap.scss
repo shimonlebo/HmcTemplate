@@ -1,12 +1,5 @@
 // Custom Bootstrap variables (override default variables here)
-$primary: #005cbb;
-$secondary: #6c757d;
-$success: #28a745;
-$info: #17a2b8;
-$warning: #ffc107;
-$danger: #dc3545;
-$light: #f8f9fa;
-$dark: #343a40;
+@use './custom-colors';
 
 // Import Bootstrap SCSS files in the correct order
 @import "../../node_modules/bootstrap/scss/functions";

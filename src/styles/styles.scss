@@ -1,5 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 @use './util-classes';
+@use './custom-colors' as colors;
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
@@ -14,7 +15,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 }
 
 *::-webkit-scrollbar-thumb {
-  background: #888;
+  background: colors.$primary;
   border-radius: 5px;
 }
 
@@ -24,6 +25,6 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 /* Custom scrollbar styling for Firefox */
 * {
-  scrollbar-color: #888 #f1f1f1; /* thumb and track color */
+  scrollbar-color: colors.$primary #f1f1f1; /* thumb and track color */
   scrollbar-width: thin; /* similar to 'width: 3px;' in WebKit */
 }
