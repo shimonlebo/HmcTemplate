@@ -38,8 +38,8 @@ export class HomeComponent {
   displayedColumns: string[] = ['vendor', 'billNumber', 'status'];
   bills: Bill[] = [
     { vendor: 'Clearview Digital', billNumber: '#8939', status: 'DENIED' },
-    { vendor: 'Suddenlink 1129...', billNumber: '#', status: 'PENDING' },
-    { vendor: 'Z&D Medical Se...', billNumber: '#VI-001849', status: 'PENDING' },
+    { vendor: 'Suddenlink 1129...', billNumber: '#', status: 'APPROVED' },
+    { vendor: 'Z&D Medical Se...', billNumber: '#VI-001849', status: 'APPROVED' },
     { vendor: 'Z&D Medical Se...', billNumber: '#VI-001849', status: 'PENDING' },
   ];
   companyName: string = 'Test Company';

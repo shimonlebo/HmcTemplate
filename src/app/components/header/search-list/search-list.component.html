@@ -1,12 +1,14 @@
 <div class="d-flex">
-  <button mat-button (click)="isOpened = !isOpened" [matMenuTriggerFor]="companyMenu">
+  <button mat-button [matMenuTriggerFor]="companyMenu">
     <mat-icon class="material-symbols-outlined">apartment</mat-icon>
     <span>{{companyName}}</span>
     <!-- <mat-icon>keyboard_arrow_down</mat-icon> -->
   </button>
 
   <mat-menu #companyMenu="matMenu">
-    <button mat-menu-item>Items</button>
+    <button mat-menu-item *ngFor="let comp of companies" (click)="onSelect(comp)">
+      {{ comp }}
+    </button>
   </mat-menu>
 
   <button mat-icon-button>

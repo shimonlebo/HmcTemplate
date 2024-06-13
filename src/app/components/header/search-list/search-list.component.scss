@@ -48,39 +48,10 @@ li {
 
 }
 
-.primary-btn {
-  color: white;
-  background-color: #1573FF;
-  border-color: #1573FF;
-  padding: 5px 10px;
-  display: flex;
-  align-items: center;
-  border-radius: 4px;
-  font-size: 14px;
-  line-height: 24px;
-
-  span {
-    margin: 0 10px;
-  }
-}
-
-.primary-btn:hover,
-.next-btn:hover {
-  filter: brightness(90%);
-}
-
-.next-btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #dfdfdf;
-  border-radius: 4px;
-  padding: 0px 15px;
-  margin-left: 5px;
-  border-color: #dfdfdf;
-  height: 34px;
-}
-
 .company-wrapper {
   position: relative;
+}
+
+::ng-deep .mat-mdc-menu-content {
+  min-width: 145.3px; /* Adjust based on your design */
 }
