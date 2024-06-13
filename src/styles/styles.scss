@@ -3,3 +3,27 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+/* Custom Scrollbar styles */
+*::-webkit-scrollbar {
+  width: 3px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 5px;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Custom scrollbar styling for Firefox */
+* {
+  scrollbar-color: #888 #f1f1f1; /* thumb and track color */
+  scrollbar-width: thin; /* similar to 'width: 3px;' in WebKit */
+}
