@@ -25,3 +25,33 @@ mat-sidenav-content {
     }
   }
 }
+
+.mat-expansion-panel-header {
+  padding: 0 0.5rem;
+}
+
+::ng-deep .mat-expansion-panel-body {
+  padding: 0;
+}
+
+.mat-expansion-panel {
+  box-shadow: none !important;
+}
+
+.mat-expansion-panel:not(.mat-expanded) .mat-expansion-panel-header:not([aria-disabled="true"]):hover {
+  background: none;
+}
+
+.additional-info {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  text-align: center;
+  padding: 0 0.5rem;
+  font-size: small;
+}
+
+.mat-mdc-list {
+  padding: 0;
+}

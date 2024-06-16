@@ -3,11 +3,35 @@
       [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
       [mode]="(isHandset$ | async) ? 'over' : 'side'"
       [opened]="(isHandset$ | async) === false">
-    <mat-toolbar>HMC Template</mat-toolbar>
+    <mat-toolbar (click)="onShowHeader()">HMC Template</mat-toolbar>
     <mat-nav-list>
-      <a mat-list-item (click)="onShowHeader()">Show Header</a>
-      <a mat-list-item href="#">Link 2</a>
-      <a mat-list-item href="#">Link 3</a>
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>Main</mat-panel-title>
+        </mat-expansion-panel-header>
+        <mat-list-item>Dashboard</mat-list-item>
+      </mat-expansion-panel>
+
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>Users</mat-panel-title>
+        </mat-expansion-panel-header>
+        <mat-list-item>Users</mat-list-item>
+        <mat-list-item>Roles</mat-list-item>
+      </mat-expansion-panel>
+      
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>Sales</mat-panel-title>
+        </mat-expansion-panel-header>
+        <mat-list-item>Sales Orders</mat-list-item>
+        <mat-list-item>Pick & Pack</mat-list-item>
+        <mat-list-item>Invoices</mat-list-item>
+      </mat-expansion-panel>
+      
+      <div class="additional-info">
+        <p>© 2024 HMC Template</p>
+      </div>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>           
