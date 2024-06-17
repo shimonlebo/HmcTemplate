@@ -46,4 +46,16 @@ export class HomeComponent {
   showAllComps: boolean = false;
   loadData: boolean = false;
   panelOpenState = false;
+
+  setStatus(status: string): string {
+    if (status === 'DENIED') {
+      return 'bg-danger text-white';
+    } if (status === 'PENDING') {
+      return 'bg-warning text-dark';
+    } if (status === 'APPROVED') {
+      return 'bg-primary text-white';
+    } else {
+      return '';
+    }
+  }
 }

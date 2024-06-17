@@ -1,3 +1,5 @@
+@use '../../../styles/hmc-colors' as colors;
+
 mat-toolbar {
   position: sticky;
   top: 0;
@@ -13,7 +15,7 @@ mat-toolbar {
 }
 
 .title { 
-  color: #005cbb; /* TODO Add primary color */
+  color: colors.$primary;
   cursor: pointer;
   font-size: initial;
   padding: 0 1rem;

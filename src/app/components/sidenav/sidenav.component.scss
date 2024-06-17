@@ -31,7 +31,7 @@ mat-sidenav-content {
 }
 
 ::ng-deep .mat-expansion-panel-body {
-  padding: 0;
+  padding: 0 !important;
 }
 
 .mat-expansion-panel {
@@ -52,6 +52,6 @@ mat-sidenav-content {
   font-size: small;
 }
 
-.mat-mdc-list {
+::ng-deep .mat-mdc-list {
   padding: 0;
 }

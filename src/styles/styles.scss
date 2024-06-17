@@ -1,12 +1,22 @@
-/* You can add global styles to this file, and also import other style files */
-@use './util-classes';
-@use './custom-colors' as colors;
+@use './hmc-colors' as colors;
+@use './hmc-mixins' as mixins;
+@use './hmc-tables';
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
-/* Custom scrollbar styling for Firefox */
 * {
   scrollbar-color: #d3d6da #f1f1f1; /* thumb and track color */
   scrollbar-width: thin; /* similar to 'width: 3px;' in WebKit */
+}
+
+.form-control:focus {
+  box-shadow: none;
+}
+
+.content {
+  flex: 1;
+  padding: 24px;
+  background-color: #edf1f7;
+  overflow-y: auto;
 }

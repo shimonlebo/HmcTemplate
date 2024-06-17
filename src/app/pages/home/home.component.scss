@@ -1,12 +1,4 @@
-@use '../../../styles/custom-colors' as colors;
-
-@mixin text-ellipsis($max-width) {
-  text-wrap: nowrap;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  max-width: $max-width;
-}
+@use '../../../styles/hmc-colors' as colors;
 
 @mixin status($color, $bg-color) {
   color: $color;
@@ -51,25 +43,6 @@
   font-weight: 500;
 }
 
-/* Card table styles */
-table {
-  width: 100%;
-}
-
-.table {
-  margin-bottom: 0;
-}
-
-/* Adds ellipsis to overflowing text */ 
-td, th {
-  @include text-ellipsis(150px);
-}
-
-th {
-  background-color: #edf1f7 !important;
-  font-weight: 500;
-}
-
 th:first-child, td:first-child {
   padding-left: 20px;
 }
@@ -103,13 +76,6 @@ th:last-child, td:last-child {
   top: 0;
   z-index: 10; /* ensure the header is above other content */
   background-color: #fff; /* match the background to your table/card theme */
-}
-
-/* Bootstrap sticky table header */
-.sticky-top {
-  position: sticky;
-  top: 0; /* Ensure the header sticks to the top of the scrollable area */
-  z-index: 1020; /* Above fixed elements but below modal overlays */
 }
 
 .table-responsive {

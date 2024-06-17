@@ -9,6 +9,7 @@ import { MatExpansionModule } from '@angular/material/expansion';
 import { MatDividerModule } from '@angular/material/divider'; 
 import { Observable } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-sidenav',
@@ -20,7 +21,8 @@ import { map, shareReplay } from 'rxjs/operators';
     MatListModule,
     MatIconModule,
     MatExpansionModule,
-    MatDividerModule
+    MatDividerModule,
+    RouterModule
   ],
   templateUrl: './sidenav.component.html',
   styleUrl: './sidenav.component.scss'

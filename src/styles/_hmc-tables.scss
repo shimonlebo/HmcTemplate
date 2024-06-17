@@ -1,0 +1,33 @@
+@use './hmc-mixins' as mixins;
+@use './hmc-colors' as colors;
+
+table {
+  width: 100%;
+}
+
+td, th {
+  @include mixins.text-ellipsis(150px);
+}
+
+th {
+  background-color: colors.$thead-color !important;
+  font-weight: 500;
+}
+
+/* Bootstrap table styling */
+.table {
+  margin-bottom: 0;
+
+  td, th {
+    font-size: .9rem;
+    vertical-align: middle;
+  }
+}
+
+/* Bootstrap sticky table header */
+thead.sticky-top {
+  position: sticky;
+  top: 0;
+  z-index: 500; /* Above fixed elements but below modal overlays */
+}
+ 

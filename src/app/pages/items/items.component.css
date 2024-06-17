@@ -1,0 +1,7 @@
+input[type=search] {
+  max-width: 300px;
+}
+
+.table-responsive {
+  max-height: 70vh;
+}
