@@ -32,8 +32,8 @@
               }
             ],
             "styles": [
-              "bootstrap/scss/bootstrap.scss",
               "@angular/material/prebuilt-themes/azure-blue.css",
+              "src/styles/hmc-bootstrap.scss",
               "src/styles/styles.scss"
             ],
             "scripts": []

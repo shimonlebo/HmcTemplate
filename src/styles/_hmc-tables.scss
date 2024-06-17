@@ -14,7 +14,7 @@ th {
   font-weight: 500;
 }
 
-/* Bootstrap table styling */
+// Bootstrap table styling
 .table {
   margin-bottom: 0;
 
@@ -24,10 +24,10 @@ th {
   }
 }
 
-/* Bootstrap sticky table header */
+// Bootstrap sticky table header
 thead.sticky-top {
   position: sticky;
   top: 0;
-  z-index: 500; /* Above fixed elements but below modal overlays */
+  z-index: 500; // Above fixed elements but below modal overlays
 }
  
