@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { MaterialModule } from '../../../material.module';
 import { CommonModule } from '@angular/common';
+import { PdfViewerComponent } from '../../../components/pdf-viewer/pdf-viewer.component';
 
 @Component({
   selector: 'app-item-details',
   standalone: true,
-  imports: [MaterialModule, CommonModule],
+  imports: [MaterialModule, CommonModule, PdfViewerComponent],
   templateUrl: './item-details.component.html',
   styleUrls: ['./item-details.component.scss']
 })
