@@ -23,11 +23,4 @@ th {
     vertical-align: middle;
   }
 }
-
-// Bootstrap sticky table header
-thead.sticky-top {
-  position: sticky;
-  top: 0;
-  z-index: 500; // Above fixed elements but below modal overlays
-}
  

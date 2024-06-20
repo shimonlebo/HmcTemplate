@@ -1,0 +1,251 @@
+<div class="container-fluid">
+  <div class="d-flex justify-content-between align-items-center mb-3">
+    <nav class="breadcrumb">
+      <a class="breadcrumb-item text-decoration-none" href="#">Items</a>
+      <span class="breadcrumb-item active" aria-current="page">Bill #791014</span>
+    </nav>
+    <div class="top-actions">
+      <button mat-raised-button [matMenuTriggerFor]="menu">Actions</button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item (click)="togglePdfViewer()">Show PDF</button>
+        <button mat-menu-item>Item 2</button>
+      </mat-menu>
+    </div>
+  </div>
+  
+  <div class="row">
+    <!-- Main Content Area -->
+    <div [ngClass]="{'col-md-12': !isPdfViewerVisible, 'col-md-6': isPdfViewerVisible}">
+      <div class="card mb-4">
+        <div class="card-body">
+          <form>
+            <div class="row gx-2 mb-md-2">
+              <div class="col-md-2">
+                <div class="form-group">
+                  <label for="transactionType" class="form-label">Transaction Type</label>
+                  <select class="form-control form-control-sm" id="transactionType">
+                    <option>Bill</option>
+                    <!-- Other options -->
+                  </select>
+                </div>
+              </div>
+              <div class="col-md-2">
+                <div class="form-group">
+                  <label for="dateEntered" class="form-label">Date Entered</label>
+                  <input type="date" class="form-control form-control-sm" id="dateEntered">
+                </div>
+              </div>
+              <div class="col-md-2">
+                <div class="form-group">
+                  <label for="number" class="form-label">Number</label>
+                  <input type="text" class="form-control form-control-sm" id="number">
+                </div>
+              </div>
+              <div class="col-md-2">
+                <div class="form-group">
+                  <label for="receivingNo" class="form-label">Receiving No</label>
+                  <input type="text" class="form-control form-control-sm" id="receivingNo">
+                </div>
+              </div>
+              <div class="col-md-2">
+                <div class="form-group">
+                  <label for="amount" class="form-label">Amount</label>
+                  <input type="text" class="form-control form-control-sm" id="amount">
+                </div>
+              </div>
+              <div class="col-md-2">
+                <div class="form-group">
+                  <label for="amount" class="form-label">Amount</label>
+                  <input type="text" class="form-control form-control-sm" id="amount">
+                </div>
+              </div>
+              <!-- Add other form fields similarly -->
+            </div>
+            <div class="row gx-2 mb-md-2">
+              <div class="col-md-2">
+                <div class="form-group">
+                  <label for="amount" class="form-label">Amount</label>
+                  <input type="text" class="form-control form-control-sm" id="amount">
+                </div>
+              </div>
+              <div class="col-md-2">
+                <div class="form-group">
+                  <label for="dateEntered" class="form-label">Date Entered</label>
+                  <input type="date" class="form-control form-control-sm" id="dateEntered">
+                </div>
+              </div>
+              <div class="col-md-2">
+                <div class="form-group">
+                  <label for="number" class="form-label">Number</label>
+                  <input type="text" class="form-control form-control-sm" id="number">
+                </div>
+              </div>
+              <div class="col-md-2">
+                <div class="form-group">
+                  <label for="receivingNo" class="form-label">Receiving No</label>
+                  <input type="text" class="form-control form-control-sm" id="receivingNo">
+                </div>
+              </div>
+              <div class="col-md-2">
+                <div class="form-group">
+                  <label for="receivingNo" class="form-label">Receiving No</label>
+                  <input type="text" class="form-control form-control-sm" id="receivingNo">
+                </div>
+              </div>
+              <div class="col-md-2">
+                <div class="form-group">
+                  <label for="receivingNo" class="form-label">Receiving No</label>
+                  <input type="text" class="form-control form-control-sm" id="receivingNo">
+                </div>
+              </div>
+              <!-- Add other form fields similarly -->
+            </div>
+            <!-- Add more form rows as needed -->
+            <div class="d-flex justify-content-end">
+              <button mat-button type="submit" color="primary">Save</button>
+              <button mat-button color="accent">Cancel</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- Item List Table -->
+      <div class="card mb-4">
+        <div class="card-body table-responsive p-0" style="max-height: 160px;">
+          <table class="table table-hover">
+            <thead class="sticky-top">
+              <tr>
+                <th>Item</th>
+                <th>Action By</th>
+                <th>Description</th>
+                <th>Account</th>
+                <th>Quantity</th>
+                <th>Amount</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>#123900</td>
+                <td>Wade Warren</td>
+                <td>Expense Added</td>
+                <td>82133-EQUIPMENT REN</td>
+                <td>1</td>
+                <td>$20,436.91</td>
+                <td align="center">
+                  <button class="btn small-icon-button p-1 me-2">
+                    <mat-icon color="primary">edit</mat-icon>
+                  </button>
+                  <button class="btn small-icon-button p-1 me-1">
+                    <mat-icon color="warn">delete</mat-icon>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>#123900</td>
+                <td>Wade Warren</td>
+                <td>Expense Added</td>
+                <td>82133-EQUIPMENT REN</td>
+                <td>1</td>
+                <td>$20,436.91</td>
+                <td align="center">
+                  <button class="btn small-icon-button p-1 me-2">
+                    <mat-icon color="primary">edit</mat-icon>
+                  </button>
+                  <button class="btn small-icon-button p-1 me-1">
+                    <mat-icon color="warn">delete</mat-icon>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>#123900</td>
+                <td>Wade Warren</td>
+                <td>Expense Added</td>
+                <td>82133-EQUIPMENT REN</td>
+                <td>1</td>
+                <td>$20,436.91</td>
+                <td align="center">
+                  <button class="btn small-icon-button p-1 me-2">
+                    <mat-icon color="primary">edit</mat-icon>
+                  </button>
+                  <button class="btn small-icon-button p-1 me-1">
+                    <mat-icon color="warn">delete</mat-icon>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>#123900</td>
+                <td>Wade Warren</td>
+                <td>Expense Added</td>
+                <td>82133-EQUIPMENT REN</td>
+                <td>1</td>
+                <td>$20,436.91</td>
+                <td align="center">
+                  <button class="btn small-icon-button p-1 me-2">
+                    <mat-icon color="primary">edit</mat-icon>
+                  </button>
+                  <button class="btn small-icon-button p-1 me-1">
+                    <mat-icon color="warn">delete</mat-icon>
+                  </button>
+                </td>
+              </tr>
+              <!-- Add more rows as needed -->
+            </tbody>
+          </table>
+        </div>
+        <div class="card-footer d-flex justify-content-end">
+          <div style="font-size: 0.9rem; gap: 1rem;" class="d-flex">
+            <span class="text-muted">Subtotal:</span>
+            <span class="text-muted">$189.65</span>
+            <mat-divider [vertical]="true" class="h-100"></mat-divider>
+            <span class="fw-bold">Total:</span>
+            <span class="text-primary">$195.65</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Account Info, Audit Log, Vendor Info -->
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card mb-4">
+            <div class="card-header">
+              <h5>Account</h5>
+            </div>
+            <div class="card-body">
+              <!-- Account Information Content -->
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card mb-4">
+            <div class="card-header">
+              <h5>Audit Log</h5>
+            </div>
+            <div class="card-body">
+              <!-- Audit Log Content -->
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card mb-4">
+            <div class="card-header">
+              <h5>Vendor Address</h5>
+            </div>
+            <div class="card-body">
+              <!-- Vendor Info Content -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Column 2 (PDF Viewer) -->
+     @if (isPdfViewerVisible) {
+      <div class="col-md-6">
+        <div class="pdf-viewer">
+          <!-- <pdf-viewer [src]="pdfSrc" [original-size]="false" [fit-to-page]="true"></pdf-viewer> -->
+           <div class="pdf-viewer">PDF Viewer</div>
+        </div>
+      </div>
+     }    
+  </div>
+</div>

@@ -1,0 +1,52 @@
+.form-label {
+  margin-bottom: calc(0.25rem + var(--bs-border-width));
+  font-size: 0.875rem;
+}
+
+// .card-body {
+//   .form-group {
+//     max-width: 200px;
+//   }
+// }
+
+.check-button {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-color: #fff;
+  border: none;
+  border-radius: 50%;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.check-button mat-icon {
+  color: #333;
+  line-height: 40px;
+  text-align: center;
+}
+
+.small-icon-button {
+  width: 24px;
+  height: 24px;
+  min-width: 24px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  // &:hover {
+  //   background-color: #e0e0e0;
+  // }
+
+  .mat-icon {
+    font-size: 16px;
+    height: 15px;
+  }
+}
+
+.pdf-viewer {
+  height: 100%;
+  width: 100%;
+}
+
