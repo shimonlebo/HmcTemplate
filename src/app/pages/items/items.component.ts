@@ -1,7 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MaterialModule } from '../../material.module';
 import { RouterModule } from '@angular/router';
+import { MaterialModule } from '../../material.module';
+import { MatTabsModule } from '@angular/material/tabs';
+import {MatTooltipModule} from '@angular/material/tooltip'; 
+import {MatChipsModule} from '@angular/material/chips';
 
 @Component({
   selector: 'app-items',
@@ -9,7 +12,10 @@ import { RouterModule } from '@angular/router';
   imports: [
     MaterialModule,
     RouterModule,
-    CommonModule
+    CommonModule,
+    MatTabsModule,
+    MatTooltipModule,
+    MatChipsModule
   ],
   templateUrl: './items.component.html',
   styleUrls: ['./items.component.scss']

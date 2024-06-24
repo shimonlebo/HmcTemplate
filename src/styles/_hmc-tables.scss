@@ -10,17 +10,45 @@ td, th {
 }
 
 th {
-  background-color: colors.$thead-color !important;
-  font-weight: 500;
+  // background-color: colors.$thead-color !important;
+  font-weight: normal;
 }
 
 // Bootstrap table styling
 .table {
   margin-bottom: 0;
 
+  thead {
+    box-shadow: 0 0.5rem 1rem rgba(44, 51, 73, 0.1019607843);
+  }
+
   td, th {
     font-size: .9rem;
     vertical-align: middle;
   }
+}
+
+.mat-mdc-header-row {
+  box-shadow: 0 0.5rem 1rem rgba(44, 51, 73, 0.1019607843);
+}
+
+.table-fixed {
+  table-layout: fixed;
+}
+
+thead .filter-header {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+}
+
+mat-icon.filter-icon {
+  justify-self: end;
+  cursor: pointer;
+  margin-left: 8px;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
  

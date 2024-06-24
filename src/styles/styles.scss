@@ -1,9 +1,15 @@
-@use './hmc-colors' as colors;
-@use './hmc-mixins' as mixins;
-@use './hmc-tables';
+@use "./hmc-colors" as colors;
+@use "./hmc-mixins" as mixins;
+@use "./hmc-tables";
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
 
 * {
   scrollbar-color: #d3d6da #f1f1f1; // thumb and track color
@@ -20,3 +26,32 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   background-color: #edf1f7;
   overflow-y: auto;
 }
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+.bg-inherit {
+  background-color: inherit !important;
+}
+
+button.mat-icon-btn-sm {
+  height: 27px; // 20 for td
+  width: 27px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+
+  mat-icon {
+    font-size: 16px;
+    line-height: 25px;
+  }
+
+  .mat-mdc-button-touch-target {
+    height: 27px;
+    width: 27px;
+  }
+}
+
+

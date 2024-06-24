@@ -1,4 +1,3 @@
-
 <div class="container-fluid">
   <nav aria-label="breadcrumb">
     <ol class="breadcrumb">
@@ -7,378 +6,378 @@
     </ol>
   </nav>
   <mat-tab-group dynamicHeight mat-stretch-tabs="false" mat-align-tabs="center">
-    <mat-tab label="Angular Material">
-      <div class="row g-3 my-4">
+    <mat-tab label="Bootstrap">
+      <div class="row g-3 my-2">
         <div class="col">
-          <mat-card class="bills-card">
-            <mat-card-header>
-              <div class="header-content">
-                <div>
-                  <mat-card-title>BILLS</mat-card-title>
-                  <mat-card-subtitle class="text-muted">To be processed</mat-card-subtitle>
-                </div>
-                <div class="bill-count">3</div>
+          <div class="card">
+            <div class="card-header bg-white d-flex justify-content-between align-items-center">
+              <div>
+                <h5 class="mb-0">BILLS</h5>
+                <div class="text-muted">To be processed</div>
               </div>
-            </mat-card-header>
-            <mat-divider></mat-divider>
-            <mat-card-content>
-              <div class="table-responsive">
-                <table mat-table [dataSource]="bills" class="mat-elevation-z8">
-                  <ng-container matColumnDef="vendor">
-                    <th mat-header-cell *matHeaderCellDef> Vendor </th>
-                    <td mat-cell *matCellDef="let element"> {{element.vendor}} </td>
-                  </ng-container>
-                  <ng-container matColumnDef="billNumber">
-                    <th mat-header-cell *matHeaderCellDef> Bill # </th>
-                    <td mat-cell *matCellDef="let element"> {{element.billNumber}} </td>
-                  </ng-container>
-                  <ng-container matColumnDef="status">
-                    <th mat-header-cell *matHeaderCellDef> Status </th>
-                    <td mat-cell *matCellDef="let element">
-                      <span class="badge" [ngClass]="setStatus(element.status)">{{element.status}}</span>
-                    </td>
-                  </ng-container>
-                  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-                  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-                </table>
-              </div>
-              <div class="footer">
-                Showing {{bills.length}} - {{bills.length}} of bills
-              </div>
-            </mat-card-content>
-              </mat-card>
+              <div class="bill-count">3</div>
+            </div>
+            <div class="table-responsive">
+              <table class="table table-hover mb-0">
+                <thead class="sticky-top">
+                  <tr>
+                    <th>Vendor</th>
+                    <th>Bill #</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Clearview Digital</td>
+                    <td>#8939</td>
+                    <td><span class="badge bg-danger">DENIED</span></td>
+                  </tr>
+                  <tr>
+                    <td class="text-truncate">Suddenlink 1129</td>
+                    <td>#</td>
+                    <td><span class="badge bg-warning text-dark">PENDING</span></td>
+                  </tr>
+                  <tr>
+                    <td>Suddenlink 1129...</td>
+                    <td>#</td>
+                    <td><span class="badge bg-primary text-white">Approved</span></td>
+                  </tr>
+                  <tr>
+                    <td>Z&D Medical Services</td>
+                    <td>#VI-001849</td>
+                    <td><span class="badge bg-warning text-dark">PENDING</span></td>
+                  </tr>
+                  <tr>
+                    <td>Z&D Medical Services</td>
+                    <td>#VI-001849</td>
+                    <td><span class="badge bg-warning text-dark">PENDING</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="card-footer text-muted">
+              Showing 3 - 3 of 3 bills
+            </div>
+          </div>
+
         </div>
         <div class="col">
-          <mat-card class="bills-card">
-            <mat-card-header>
-              <div class="header-content">
-                <div>
-                  <mat-card-title>BILLS</mat-card-title>
-                  <mat-card-subtitle class="text-muted">To be processed</mat-card-subtitle>
-                </div>
-                <div class="bill-count">3</div>
+          <div class="card">
+            <div class="card-header bg-white d-flex justify-content-between align-items-center">
+              <div>
+                <h5 class="mb-0">BILLS</h5>
+                <div class="text-muted">To be processed</div>
               </div>
-            </mat-card-header>
-            <mat-divider></mat-divider>
-            <mat-card-content>
-              <div class="table-responsive">
-                <table mat-table [dataSource]="bills" class="mat-elevation-z8">
-                  <ng-container matColumnDef="vendor">
-                    <th mat-header-cell *matHeaderCellDef> Vendor </th>
-                    <td mat-cell *matCellDef="let element"> {{element.vendor}} </td>
-                  </ng-container>
-                  <ng-container matColumnDef="billNumber">
-                    <th mat-header-cell *matHeaderCellDef> Bill # </th>
-                    <td mat-cell *matCellDef="let element"> {{element.billNumber}} </td>
-                  </ng-container>
-                  <ng-container matColumnDef="status">
-                    <th mat-header-cell *matHeaderCellDef> Status </th>
-                    <td mat-cell *matCellDef="let element">
-                      <span class="badge" [ngClass]="setStatus(element.status)">{{element.status}}</span>
-                    </td>
-                  </ng-container>
-                  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-                  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-                </table>
-              </div>
-              <div class="footer">
-                Showing {{bills.length}} - {{bills.length}} of bills
-              </div>
-            </mat-card-content>
-              </mat-card>
+              <div class="bill-count">3</div>
+            </div>
+            <div class="table-responsive">
+              <table class="table table-hover mb-0">
+                <thead class="sticky-top">
+                  <tr>
+                    <th>Vendor</th>
+                    <th>Bill #</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Clearview Digital</td>
+                    <td>#8939</td>
+                    <td><span class="badge bg-danger">DENIED</span></td>
+                  </tr>
+                  <tr>
+                    <td class="text-truncate">Suddenlink 1129</td>
+                    <td>#</td>
+                    <td><span class="badge bg-warning text-dark">PENDING</span></td>
+                  </tr>
+                  <tr>
+                    <td>Suddenlink 1129...</td>
+                    <td>#</td>
+                    <td><span class="badge bg-primary text-white">Approved</span></td>
+                  </tr>
+                  <tr>
+                    <td>Z&D Medical Services</td>
+                    <td>#VI-001849</td>
+                    <td><span class="badge bg-warning text-dark">PENDING</span></td>
+                  </tr>
+                  <tr>
+                    <td>Z&D Medical Services</td>
+                    <td>#VI-001849</td>
+                    <td><span class="badge bg-warning text-dark">PENDING</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="card-footer text-muted">
+              Showing 3 - 3 of 3 bills
+            </div>
+          </div>
         </div>
         <div class="col">
-          <mat-card class="bills-card">
-            <mat-card-header>
-              <div class="header-content">
-                <div>
-                  <mat-card-title>BILLS</mat-card-title>
-                  <mat-card-subtitle class="text-muted">To be processed</mat-card-subtitle>
-                </div>
-                <div class="bill-count">3</div>
+          <div class="card">
+            <div class="card-header bg-white d-flex justify-content-between align-items-center">
+              <div>
+                <h5 class="mb-0">BILLS</h5>
+                <div class="text-muted">To be processed</div>
               </div>
-            </mat-card-header>
-            <mat-divider></mat-divider>
-            <mat-card-content>
-              <div class="table-responsive">
-                <table mat-table [dataSource]="bills" class="mat-elevation-z8">
-                  <ng-container matColumnDef="vendor">
-                    <th mat-header-cell *matHeaderCellDef> Vendor </th>
-                    <td mat-cell *matCellDef="let element"> {{element.vendor}} </td>
-                  </ng-container>
-                  <ng-container matColumnDef="billNumber">
-                    <th mat-header-cell *matHeaderCellDef> Bill # </th>
-                    <td mat-cell *matCellDef="let element"> {{element.billNumber}} </td>
-                  </ng-container>
-                  <ng-container matColumnDef="status">
-                    <th mat-header-cell *matHeaderCellDef> Status </th>
-                    <td mat-cell *matCellDef="let element">
-                      <span class="badge" [ngClass]="setStatus(element.status)">{{element.status}}</span>
-                    </td>
-                  </ng-container>
-                  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-                  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-                </table>
-              </div>
-              <div class="footer">
-                Showing {{bills.length}} - {{bills.length}} of bills
-              </div>
-            </mat-card-content>
-              </mat-card>
+              <div class="bill-count">3</div>
+            </div>
+            <div class="table-responsive">
+              <table class="table table-hover mb-0">
+                <thead class="sticky-top">
+                  <tr>
+                    <th>Vendor</th>
+                    <th>Bill #</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Clearview Digital</td>
+                    <td>#8939</td>
+                    <td><span class="badge bg-danger">DENIED</span></td>
+                  </tr>
+                  <tr>
+                    <td class="text-truncate">Suddenlink 1129</td>
+                    <td>#</td>
+                    <td><span class="badge bg-warning text-dark">PENDING</span></td>
+                  </tr>
+                  <tr>
+                    <td>Suddenlink 1129...</td>
+                    <td>#</td>
+                    <td><span class="badge bg-primary text-white">Approved</span></td>
+                  </tr>
+                  <tr>
+                    <td>Z&D Medical Services</td>
+                    <td>#VI-001849</td>
+                    <td><span class="badge bg-warning text-dark">PENDING</span></td>
+                  </tr>
+                  <tr>
+                    <td>Z&D Medical Services</td>
+                    <td>#VI-001849</td>
+                    <td><span class="badge bg-warning text-dark">PENDING</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="card-footer text-muted">
+              Showing 3 - 3 of 3 bills
+            </div>
+          </div>
         </div>
         <div class="col">
-          <mat-card class="bills-card">
-            <mat-card-header>
-              <div class="header-content">
-                <div>
-                  <mat-card-title>BILLS</mat-card-title>
-                  <mat-card-subtitle class="text-muted">To be processed</mat-card-subtitle>
-                </div>
-                <div class="bill-count">3</div>
+          <div class="card">
+            <div class="card-header bg-white d-flex justify-content-between align-items-center">
+              <div>
+                <h5 class="mb-0">BILLS</h5>
+                <div class="text-muted">To be processed</div>
               </div>
-            </mat-card-header>
-            <mat-divider></mat-divider>
-            <mat-card-content>
-              <div class="table-responsive">
-                <table mat-table [dataSource]="bills" class="mat-elevation-z8">
-                  <ng-container matColumnDef="vendor">
-                    <th mat-header-cell *matHeaderCellDef> Vendor </th>
-                    <td mat-cell *matCellDef="let element"> {{element.vendor}} </td>
-                  </ng-container>
-                  <ng-container matColumnDef="billNumber">
-                    <th mat-header-cell *matHeaderCellDef> Bill # </th>
-                    <td mat-cell *matCellDef="let element"> {{element.billNumber}} </td>
-                  </ng-container>
-                  <ng-container matColumnDef="status">
-                    <th mat-header-cell *matHeaderCellDef> Status </th>
-                    <td mat-cell *matCellDef="let element">
-                      <span class="badge" [ngClass]="setStatus(element.status)">{{element.status}}</span>
-                    </td>
-                  </ng-container>
-                  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-                  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-                </table>
-              </div>
-              <div class="footer">
-                Showing {{bills.length}} - {{bills.length}} of bills
-              </div>
-            </mat-card-content>
-              </mat-card>
+              <div class="bill-count">3</div>
+            </div>
+            <div class="table-responsive">
+              <table class="table table-hover mb-0">
+                <thead class="sticky-top">
+                  <tr>
+                    <th>Vendor</th>
+                    <th>Bill #</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Clearview Digital</td>
+                    <td>#8939</td>
+                    <td><span class="badge bg-danger">DENIED</span></td>
+                  </tr>
+                  <tr>
+                    <td class="text-truncate">Suddenlink 1129</td>
+                    <td>#</td>
+                    <td><span class="badge bg-warning text-dark">PENDING</span></td>
+                  </tr>
+                  <tr>
+                    <td>Suddenlink 1129...</td>
+                    <td>#</td>
+                    <td><span class="badge bg-primary text-white">Approved</span></td>
+                  </tr>
+                  <tr>
+                    <td>Z&D Medical Services</td>
+                    <td>#VI-001849</td>
+                    <td><span class="badge bg-warning text-dark">PENDING</span></td>
+                  </tr>
+                  <tr>
+                    <td>Z&D Medical Services</td>
+                    <td>#VI-001849</td>
+                    <td><span class="badge bg-warning text-dark">PENDING</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="card-footer text-muted">
+              Showing 3 - 3 of 3 bills
+            </div>
+          </div>
         </div>
       </div>
     </mat-tab>
-    <mat-tab label="Bootstrap">
-      <div class="row g-3 my-4">
+    <mat-tab label="Angular Material">
+      <div class="row g-3">
         <div class="col">
-          <div class="card">
-            <div class="card-header bg-white d-flex justify-content-between align-items-center">
+          <mat-card class="bills-card">
+            <mat-card-header>
+              <div class="header-content">
                 <div>
-                    <h5 class="mb-0">BILLS</h5>
-                    <div class="text-muted">To be processed</div>
+                  <mat-card-title>BILLS</mat-card-title>
+                  <mat-card-subtitle class="text-muted">To be processed</mat-card-subtitle>
                 </div>
                 <div class="bill-count">3</div>
-            </div>
-            <div class="table-responsive">
-                <table class="table table-hover mb-0">
-                    <thead class="sticky-top">
-                        <tr>
-                            <th>Vendor</th>
-                            <th>Bill #</th>
-                            <th>Status</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Clearview Digital</td>
-                            <td>#8939</td>
-                            <td><span class="badge bg-danger">DENIED</span></td>
-                        </tr>
-                        <tr>
-                            <td class="text-truncate">Suddenlink 1129</td>
-                            <td>#</td>
-                            <td><span class="badge bg-warning text-dark">PENDING</span></td>
-                        </tr>
-                        <tr>
-                            <td>Suddenlink 1129...</td>
-                            <td>#</td>
-                            <td><span class="badge bg-primary text-white">Approved</span></td>
-                        </tr>
-                        <tr>
-                            <td>Z&D Medical Services</td>
-                            <td>#VI-001849</td>
-                            <td><span class="badge bg-warning text-dark">PENDING</span></td>
-                        </tr>
-                        <tr>
-                          <td>Z&D Medical Services</td>
-                          <td>#VI-001849</td>
-                          <td><span class="badge bg-warning text-dark">PENDING</span></td>
-                      </tr>
-                    </tbody>
+              </div>
+            </mat-card-header>
+            <mat-divider></mat-divider>
+            <mat-card-content>
+              <div class="table-responsive">
+                <table mat-table [dataSource]="bills" class="mat-elevation-z8">
+                  <ng-container matColumnDef="vendor">
+                    <th mat-header-cell *matHeaderCellDef> Vendor </th>
+                    <td mat-cell *matCellDef="let element"> {{element.vendor}} </td>
+                  </ng-container>
+                  <ng-container matColumnDef="billNumber">
+                    <th mat-header-cell *matHeaderCellDef> Bill # </th>
+                    <td mat-cell *matCellDef="let element"> {{element.billNumber}} </td>
+                  </ng-container>
+                  <ng-container matColumnDef="status">
+                    <th mat-header-cell *matHeaderCellDef> Status </th>
+                    <td mat-cell *matCellDef="let element">
+                      <span class="badge" [ngClass]="setStatus(element.status)">{{element.status}}</span>
+                    </td>
+                  </ng-container>
+                  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
                 </table>
-            </div>
-            <div class="card-footer text-muted">
-                Showing 3 - 3 of 3 bills
-            </div>
-        </div>
-        
+              </div>
+              <div class="footer">
+                Showing {{bills.length}} - {{bills.length}} of bills
+              </div>
+            </mat-card-content>
+          </mat-card>
         </div>
         <div class="col">
-          <div class="card">
-            <div class="card-header bg-white d-flex justify-content-between align-items-center">
+          <mat-card class="bills-card">
+            <mat-card-header>
+              <div class="header-content">
                 <div>
-                    <h5 class="mb-0">BILLS</h5>
-                    <div class="text-muted">To be processed</div>
+                  <mat-card-title>BILLS</mat-card-title>
+                  <mat-card-subtitle class="text-muted">To be processed</mat-card-subtitle>
                 </div>
                 <div class="bill-count">3</div>
-            </div>
-            <div class="table-responsive">
-                <table class="table table-hover mb-0">
-                    <thead class="sticky-top">
-                        <tr>
-                            <th>Vendor</th>
-                            <th>Bill #</th>
-                            <th>Status</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Clearview Digital</td>
-                            <td>#8939</td>
-                            <td><span class="badge bg-danger">DENIED</span></td>
-                        </tr>
-                        <tr>
-                            <td class="text-truncate">Suddenlink 1129</td>
-                            <td>#</td>
-                            <td><span class="badge bg-warning text-dark">PENDING</span></td>
-                        </tr>
-                        <tr>
-                            <td>Suddenlink 1129...</td>
-                            <td>#</td>
-                            <td><span class="badge bg-primary text-white">Approved</span></td>
-                        </tr>
-                        <tr>
-                            <td>Z&D Medical Services</td>
-                            <td>#VI-001849</td>
-                            <td><span class="badge bg-warning text-dark">PENDING</span></td>
-                        </tr>
-                        <tr>
-                          <td>Z&D Medical Services</td>
-                          <td>#VI-001849</td>
-                          <td><span class="badge bg-warning text-dark">PENDING</span></td>
-                      </tr>
-                    </tbody>
+              </div>
+            </mat-card-header>
+            <mat-divider></mat-divider>
+            <mat-card-content>
+              <div class="table-responsive">
+                <table mat-table [dataSource]="bills" class="mat-elevation-z8">
+                  <ng-container matColumnDef="vendor">
+                    <th mat-header-cell *matHeaderCellDef> Vendor </th>
+                    <td mat-cell *matCellDef="let element"> {{element.vendor}} </td>
+                  </ng-container>
+                  <ng-container matColumnDef="billNumber">
+                    <th mat-header-cell *matHeaderCellDef> Bill # </th>
+                    <td mat-cell *matCellDef="let element"> {{element.billNumber}} </td>
+                  </ng-container>
+                  <ng-container matColumnDef="status">
+                    <th mat-header-cell *matHeaderCellDef> Status </th>
+                    <td mat-cell *matCellDef="let element">
+                      <span class="badge" [ngClass]="setStatus(element.status)">{{element.status}}</span>
+                    </td>
+                  </ng-container>
+                  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
                 </table>
-            </div>
-            <div class="card-footer text-muted">
-                Showing 3 - 3 of 3 bills
-            </div>
-        </div>        
+              </div>
+              <div class="footer">
+                Showing {{bills.length}} - {{bills.length}} of bills
+              </div>
+            </mat-card-content>
+          </mat-card>
         </div>
         <div class="col">
-          <div class="card">
-            <div class="card-header bg-white d-flex justify-content-between align-items-center">
+          <mat-card class="bills-card">
+            <mat-card-header>
+              <div class="header-content">
                 <div>
-                    <h5 class="mb-0">BILLS</h5>
-                    <div class="text-muted">To be processed</div>
+                  <mat-card-title>BILLS</mat-card-title>
+                  <mat-card-subtitle class="text-muted">To be processed</mat-card-subtitle>
                 </div>
                 <div class="bill-count">3</div>
-            </div>
-            <div class="table-responsive">
-                <table class="table table-hover mb-0">
-                    <thead class="sticky-top">
-                        <tr>
-                            <th>Vendor</th>
-                            <th>Bill #</th>
-                            <th>Status</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Clearview Digital</td>
-                            <td>#8939</td>
-                            <td><span class="badge bg-danger">DENIED</span></td>
-                        </tr>
-                        <tr>
-                            <td class="text-truncate">Suddenlink 1129</td>
-                            <td>#</td>
-                            <td><span class="badge bg-warning text-dark">PENDING</span></td>
-                        </tr>
-                        <tr>
-                            <td>Suddenlink 1129...</td>
-                            <td>#</td>
-                            <td><span class="badge bg-primary text-white">Approved</span></td>
-                        </tr>
-                        <tr>
-                            <td>Z&D Medical Services</td>
-                            <td>#VI-001849</td>
-                            <td><span class="badge bg-warning text-dark">PENDING</span></td>
-                        </tr>
-                        <tr>
-                          <td>Z&D Medical Services</td>
-                          <td>#VI-001849</td>
-                          <td><span class="badge bg-warning text-dark">PENDING</span></td>
-                      </tr>
-                    </tbody>
+              </div>
+            </mat-card-header>
+            <mat-divider></mat-divider>
+            <mat-card-content>
+              <div class="table-responsive">
+                <table mat-table [dataSource]="bills" class="mat-elevation-z8">
+                  <ng-container matColumnDef="vendor">
+                    <th mat-header-cell *matHeaderCellDef> Vendor </th>
+                    <td mat-cell *matCellDef="let element"> {{element.vendor}} </td>
+                  </ng-container>
+                  <ng-container matColumnDef="billNumber">
+                    <th mat-header-cell *matHeaderCellDef> Bill # </th>
+                    <td mat-cell *matCellDef="let element"> {{element.billNumber}} </td>
+                  </ng-container>
+                  <ng-container matColumnDef="status">
+                    <th mat-header-cell *matHeaderCellDef> Status </th>
+                    <td mat-cell *matCellDef="let element">
+                      <span class="badge" [ngClass]="setStatus(element.status)">{{element.status}}</span>
+                    </td>
+                  </ng-container>
+                  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
                 </table>
-            </div>
-            <div class="card-footer text-muted">
-                Showing 3 - 3 of 3 bills
-            </div>
-        </div>        
+              </div>
+              <div class="footer">
+                Showing {{bills.length}} - {{bills.length}} of bills
+              </div>
+            </mat-card-content>
+          </mat-card>
         </div>
         <div class="col">
-          <div class="card">
-            <div class="card-header bg-white d-flex justify-content-between align-items-center">
+          <mat-card class="bills-card">
+            <mat-card-header>
+              <div class="header-content">
                 <div>
-                    <h5 class="mb-0">BILLS</h5>
-                    <div class="text-muted">To be processed</div>
+                  <mat-card-title>BILLS</mat-card-title>
+                  <mat-card-subtitle class="text-muted">To be processed</mat-card-subtitle>
                 </div>
                 <div class="bill-count">3</div>
-            </div>
-            <div class="table-responsive">
-                <table class="table table-hover mb-0">
-                    <thead class="sticky-top">
-                        <tr>
-                            <th>Vendor</th>
-                            <th>Bill #</th>
-                            <th>Status</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Clearview Digital</td>
-                            <td>#8939</td>
-                            <td><span class="badge bg-danger">DENIED</span></td>
-                        </tr>
-                        <tr>
-                            <td class="text-truncate">Suddenlink 1129</td>
-                            <td>#</td>
-                            <td><span class="badge bg-warning text-dark">PENDING</span></td>
-                        </tr>
-                        <tr>
-                            <td>Suddenlink 1129...</td>
-                            <td>#</td>
-                            <td><span class="badge bg-primary text-white">Approved</span></td>
-                        </tr>
-                        <tr>
-                            <td>Z&D Medical Services</td>
-                            <td>#VI-001849</td>
-                            <td><span class="badge bg-warning text-dark">PENDING</span></td>
-                        </tr>
-                        <tr>
-                          <td>Z&D Medical Services</td>
-                          <td>#VI-001849</td>
-                          <td><span class="badge bg-warning text-dark">PENDING</span></td>
-                      </tr>
-                    </tbody>
+              </div>
+            </mat-card-header>
+            <mat-divider></mat-divider>
+            <mat-card-content>
+              <div class="table-responsive">
+                <table mat-table [dataSource]="bills" class="mat-elevation-z8">
+                  <ng-container matColumnDef="vendor">
+                    <th mat-header-cell *matHeaderCellDef> Vendor </th>
+                    <td mat-cell *matCellDef="let element"> {{element.vendor}} </td>
+                  </ng-container>
+                  <ng-container matColumnDef="billNumber">
+                    <th mat-header-cell *matHeaderCellDef> Bill # </th>
+                    <td mat-cell *matCellDef="let element"> {{element.billNumber}} </td>
+                  </ng-container>
+                  <ng-container matColumnDef="status">
+                    <th mat-header-cell *matHeaderCellDef> Status </th>
+                    <td mat-cell *matCellDef="let element">
+                      <span class="badge" [ngClass]="setStatus(element.status)">{{element.status}}</span>
+                    </td>
+                  </ng-container>
+                  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
                 </table>
-            </div>
-            <div class="card-footer text-muted">
-                Showing 3 - 3 of 3 bills
-            </div>
+              </div>
+              <div class="footer">
+                Showing {{bills.length}} - {{bills.length}} of bills
+              </div>
+            </mat-card-content>
+          </mat-card>
         </div>
-        </div>
-      </div>      
+      </div>
     </mat-tab>
     <mat-tab label="Mat Accordion">
       <div class="my-4">
@@ -432,7 +431,7 @@
             <p>This is the primary content of the panel.</p>
           </mat-expansion-panel>
         </mat-accordion>
-      </div>  
+      </div>
     </mat-tab>
   </mat-tab-group>
 </div>
