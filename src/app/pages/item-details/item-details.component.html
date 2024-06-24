@@ -1,114 +1,94 @@
 <div class="container-fluid">
-  <div class="d-flex justify-content-between align-items-center mb-3">
-    <nav class="breadcrumb">
-      <a class="breadcrumb-item text-decoration-none" href="#">Items</a>
+  <mat-toolbar class="bg-inherit p-0">
+    <nav class="breadcrumb mb-0 fs-6">
+      <a class="breadcrumb-item text-decoration-none" href="/items">Items</a>
       <span class="breadcrumb-item active" aria-current="page">Bill #791014</span>
     </nav>
-    <div class="top-actions">
-      <button mat-raised-button [matMenuTriggerFor]="menu">Actions</button>
-      <mat-menu #menu="matMenu">
-        <button mat-menu-item (click)="togglePdfViewer()">Show PDF</button>
-        <button mat-menu-item>Item 2</button>
-      </mat-menu>
-    </div>
-  </div>
-  
-  <div class="row">
-    <!-- Main Content Area -->
+    <span class="spacer"></span>
+    <button mat-icon-button (click)="togglePdfViewer()">
+      <mat-icon class="material-symbols-outlined">picture_as_pdf</mat-icon>
+    </button>
+  </mat-toolbar>
+
+  <!-- Main Content Area -->
+  <div class="row">    
     <div [ngClass]="{'col-md-12': !isPdfViewerVisible, 'col-md-6': isPdfViewerVisible}">
       <div class="card mb-4">
         <div class="card-body">
-          <div class="row gx-2 mb-md-2">
-            <div class="col-md-2">
-              <div class="form-group">
+          <div class="row gx-3">
+            <div class="col">
+              <div class="form-group mb-2">
                 <label for="transactionType" class="form-label">Transaction Type</label>
                 <select class="form-control form-control-sm" id="transactionType">
                   <option>Bill</option>
                   <!-- Other options -->
                 </select>
               </div>
-            </div>
-            <div class="col-md-2">
-              <div class="form-group">
+              <div class="form-group mb-2">
                 <label for="dateEntered" class="form-label">Date Entered</label>
                 <input type="date" class="form-control form-control-sm" id="dateEntered">
               </div>
-            </div>
-            <div class="col-md-2">
-              <div class="form-group">
+              <div class="form-group mb-2">
                 <label for="number" class="form-label">Number</label>
                 <input type="text" class="form-control form-control-sm" id="number">
               </div>
-            </div>
-            <div class="col-md-2">
               <div class="form-group">
                 <label for="receivingNo" class="form-label">Receiving No</label>
                 <input type="text" class="form-control form-control-sm" id="receivingNo">
               </div>
             </div>
-            <div class="col-md-2">
-              <div class="form-group">
+            <div class="col">
+              <div class="form-group mb-2">
+                <label for="receivingNo" class="form-label">Receiving No</label>
+                <input type="text" class="form-control form-control-sm" id="receivingNo">
+              </div>
+              <div class="form-group mb-2">
                 <label for="amount" class="form-label">Amount</label>
                 <input type="text" class="form-control form-control-sm" id="amount">
               </div>
-            </div>
-            <div class="col-md-2">
-              <div class="form-group">
+              <div class="form-group mb-2">
                 <label for="amount" class="form-label">Amount</label>
                 <input type="text" class="form-control form-control-sm" id="amount">
               </div>
-            </div>
-            <!-- Add other form fields similarly -->
-          </div>
-          <div class="row gx-2 mb-md-2">
-            <div class="col-md-2">
               <div class="form-group">
+                <label for="receivingNo" class="form-label">Receiving No</label>
+                <input type="text" class="form-control form-control-sm" id="receivingNo">
+              </div>
+            </div>
+            <div class="col">
+              <div class="form-group mb-2">
                 <label for="amount" class="form-label">Amount</label>
                 <input type="text" class="form-control form-control-sm" id="amount">
               </div>
-            </div>
-            <div class="col-md-2">
-              <div class="form-group">
+              <div class="form-group mb-2">
                 <label for="dateEntered" class="form-label">Date Entered</label>
                 <input type="date" class="form-control form-control-sm" id="dateEntered">
               </div>
-            </div>
-            <div class="col-md-2">
-              <div class="form-group">
+              <div class="form-group mb-2">
                 <label for="number" class="form-label">Number</label>
                 <input type="text" class="form-control form-control-sm" id="number">
               </div>
-            </div>
-            <div class="col-md-2">
               <div class="form-group">
                 <label for="receivingNo" class="form-label">Receiving No</label>
                 <input type="text" class="form-control form-control-sm" id="receivingNo">
               </div>
             </div>
-            <div class="col-md-2">
+            <div class="col">
               <div class="form-group">
-                <label for="receivingNo" class="form-label">Receiving No</label>
-                <input type="text" class="form-control form-control-sm" id="receivingNo">
+                <label for="file" class="form-label">File Upload</label>
+                <input type="file" class="form-control form-control-sm" id="file">
               </div>
             </div>
-            <div class="col-md-2">
-              <div class="form-group">
-                <label for="receivingNo" class="form-label">Receiving No</label>
-                <input type="text" class="form-control form-control-sm" id="receivingNo">
-              </div>
+            <div class="col">
+              <div class="mb-2"><button mat-stroked-button class="w-100">Cancel</button></div>
+              <div><button mat-stroked-button class="w-100" color="primary">Save</button></div>
             </div>
-            <!-- Add other form fields similarly -->
-          </div>
-          <!-- Add more form rows as needed -->
-          <div class="d-flex justify-content-end">
-            <button mat-button type="submit" color="primary">Save</button>
-            <button mat-button color="accent">Cancel</button>
           </div>
         </div>
       </div>
 
       <!-- Item List Table -->
-      <div class="card mb-4">
+      <div class="card">
         <div class="card-body p-0">
           <app-table [maxTableHeight]="'160px'" [responsive]="true"></app-table>
         </div>
@@ -123,212 +103,51 @@
         </div>
       </div>
 
+      <mat-toolbar class="bg-inherit p-0">
+        <button mat-icon-button class="my-3">
+          <mat-icon class="material-symbols-outlined">settings</mat-icon>
+        </button>
+      </mat-toolbar>
+
       <!-- Account Info, Audit Log, Vendor Info -->
       <div class="row">
-        <div class="col-md-4">
+        <div class="col">
           <div class="card mb-4">
             <div class="card-header">
               <h5>Account</h5>
             </div>
             <div class="card-body table-responsive p-0" style="max-height: 160px;">
-              <table class="table table-hover">
-                <thead class="sticky-top">
-                  <tr>
-                    <th>Quantity</th>
-                    <th>Amount</th>
-                    <th></th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>#123900</td>
-                    <td>$20,436.91</td>
-                    <td align="center">
-                      <button class="btn small-icon-button p-1 me-2">
-                        <mat-icon color="primary">edit</mat-icon>
-                      </button>
-                      <button class="btn small-icon-button p-1 me-1">
-                        <mat-icon color="warn">delete</mat-icon>
-                      </button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>#123900</td>
-                    <td>$20,436.91</td>
-                    <td align="center">
-                      <button class="btn small-icon-button p-1 me-2">
-                        <mat-icon color="primary">edit</mat-icon>
-                      </button>
-                      <button class="btn small-icon-button p-1 me-1">
-                        <mat-icon color="warn">delete</mat-icon>
-                      </button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>#123900</td>
-                    <td>Wade Warren</td>
-                    <td align="center">
-                      <button class="btn small-icon-button p-1 me-2">
-                        <mat-icon color="primary">edit</mat-icon>
-                      </button>
-                      <button class="btn small-icon-button p-1 me-1">
-                        <mat-icon color="warn">delete</mat-icon>
-                      </button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>#123900</td>
-                    <td>$20,436.91</td>
-                    <td align="center">
-                      <button class="btn small-icon-button p-1 me-2">
-                        <mat-icon color="primary">edit</mat-icon>
-                      </button>
-                      <button class="btn small-icon-button p-1 me-1">
-                        <mat-icon color="warn">delete</mat-icon>
-                      </button>
-                    </td>
-                  </tr>
-                  <!-- Add more rows as needed -->
-                </tbody>
-              </table>
+              card content
             </div>
           </div>
         </div>
-        <div class="col-md-4">
+        <div class="col">
           <div class="card mb-4">
             <div class="card-header">
               <h5>Audit Log</h5>
             </div>
             <div class="card-body table-responsive p-0" style="max-height: 160px;">
-              <table class="table table-hover">
-                <thead class="sticky-top">
-                  <tr>
-                    <th>Quantity</th>
-                    <th>Amount</th>
-                    <th></th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>#123900</td>
-                    <td>$20,436.91</td>
-                    <td align="center">
-                      <button class="btn small-icon-button p-1 me-2">
-                        <mat-icon color="primary">edit</mat-icon>
-                      </button>
-                      <button class="btn small-icon-button p-1 me-1">
-                        <mat-icon color="warn">delete</mat-icon>
-                      </button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>#123900</td>
-                    <td>$20,436.91</td>
-                    <td align="center">
-                      <button class="btn small-icon-button p-1 me-2">
-                        <mat-icon color="primary">edit</mat-icon>
-                      </button>
-                      <button class="btn small-icon-button p-1 me-1">
-                        <mat-icon color="warn">delete</mat-icon>
-                      </button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>#123900</td>
-                    <td>Wade Warren</td>
-                    <td align="center">
-                      <button class="btn small-icon-button p-1 me-2">
-                        <mat-icon color="primary">edit</mat-icon>
-                      </button>
-                      <button class="btn small-icon-button p-1 me-1">
-                        <mat-icon color="warn">delete</mat-icon>
-                      </button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>#123900</td>
-                    <td>$20,436.91</td>
-                    <td align="center">
-                      <button class="btn small-icon-button p-1 me-2">
-                        <mat-icon color="primary">edit</mat-icon>
-                      </button>
-                      <button class="btn small-icon-button p-1 me-1">
-                        <mat-icon color="warn">delete</mat-icon>
-                      </button>
-                    </td>
-                  </tr>
-                  <!-- Add more rows as needed -->
-                </tbody>
-              </table>
+              card content
             </div>
           </div>
         </div>
-        <div class="col-md-4">
+        <div class="col">
           <div class="card mb-4">
             <div class="card-header">
               <h5>Vendor Address</h5>
             </div>
             <div class="card-body table-responsive p-0" style="max-height: 160px;">
-              <table class="table table-hover">
-                <thead class="sticky-top">
-                  <tr>
-                    <th>Quantity</th>
-                    <th>Amount</th>
-                    <th></th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>#123900</td>
-                    <td>$20,436.91</td>
-                    <td align="center">
-                      <button class="btn small-icon-button p-1 me-2">
-                        <mat-icon color="primary">edit</mat-icon>
-                      </button>
-                      <button class="btn small-icon-button p-1 me-1">
-                        <mat-icon color="warn">delete</mat-icon>
-                      </button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>#123900</td>
-                    <td>$20,436.91</td>
-                    <td align="center">
-                      <button class="btn small-icon-button p-1 me-2">
-                        <mat-icon color="primary">edit</mat-icon>
-                      </button>
-                      <button class="btn small-icon-button p-1 me-1">
-                        <mat-icon color="warn">delete</mat-icon>
-                      </button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>#123900</td>
-                    <td>Wade Warren</td>
-                    <td align="center">
-                      <button class="btn small-icon-button p-1 me-2">
-                        <mat-icon color="primary">edit</mat-icon>
-                      </button>
-                      <button class="btn small-icon-button p-1 me-1">
-                        <mat-icon color="warn">delete</mat-icon>
-                      </button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>#123900</td>
-                    <td>$20,436.91</td>
-                    <td align="center">
-                      <button class="btn small-icon-button p-1 me-2">
-                        <mat-icon color="primary">edit</mat-icon>
-                      </button>
-                      <button class="btn small-icon-button p-1 me-1">
-                        <mat-icon color="warn">delete</mat-icon>
-                      </button>
-                    </td>
-                  </tr>
-                  <!-- Add more rows as needed -->
-                </tbody>
-              </table>
+              card content
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card mb-4">
+            <div class="card-header">
+              <h5>Vendor Address</h5>
+            </div>
+            <div class="card-body table-responsive p-0" style="max-height: 160px;">
+              card content
             </div>
           </div>
         </div>
