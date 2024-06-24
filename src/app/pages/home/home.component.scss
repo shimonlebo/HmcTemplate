@@ -7,17 +7,6 @@
   border-radius: 5px;
 }
 
-/* Prevents tab labels from stretching */
-::ng-deep .mat-mdc-tab-labels {
-  justify-content: center;
-}
-
-/* Ensures each tab label fits its content */
-::ng-deep .mat-mdc-tab.mdc-tab {
-  flex-grow: 0 !important;
-  min-width: 200px;
-}
-
 /* Material Card */
 .mat-mdc-card-content {
   padding-right: 0;
