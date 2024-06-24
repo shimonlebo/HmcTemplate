@@ -5,6 +5,7 @@ import { MaterialModule } from '../../material.module';
 import { MatTabsModule } from '@angular/material/tabs';
 import {MatTooltipModule} from '@angular/material/tooltip'; 
 import {MatChipsModule} from '@angular/material/chips';
+import { TableComponent } from '../../components/table/table.component';
 
 @Component({
   selector: 'app-items',
@@ -15,7 +16,8 @@ import {MatChipsModule} from '@angular/material/chips';
     CommonModule,
     MatTabsModule,
     MatTooltipModule,
-    MatChipsModule
+    MatChipsModule,
+    TableComponent
   ],
   templateUrl: './items.component.html',
   styleUrls: ['./items.component.scss']

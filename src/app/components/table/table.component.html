@@ -1,0 +1,104 @@
+<div 
+  [class.table-responsive]="responsive()" 
+  [style.max-height]="maxTableHeight()">
+  <table class="table table-hover">
+    <thead class="sticky-top">
+      <tr>
+        <th>
+          <app-table-header [headerText]="'Item Name'" [addFilter]="true"></app-table-header>
+        </th>
+        <th>
+          <app-table-header [headerText]="'Action By'" [addFilter]="true"></app-table-header>
+        </th>
+        <th>
+          <app-table-header [headerText]="'Description'" [addFilter]="true"></app-table-header>
+        </th>
+        <th>
+          <app-table-header [headerText]="'Account'" [addFilter]="true"></app-table-header>
+        </th>
+        <th>
+          <app-table-header [headerText]="'Quantity'" [addFilter]="true"></app-table-header>
+        </th>
+        <th>
+          <app-table-header [headerText]="'Amount'" [addFilter]="true"></app-table-header>
+        </th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>#123900</td>
+        <td>Wade Warren</td>
+        <td>Expense Added</td>
+        <td>82133-EQUIPMENT REN</td>
+        <td>1</td>
+        <td>$20,436.91</td>
+        <td align="center">
+          <div class="d-flex">
+            <button mat-icon-button class="mat-icon-btn-sm">
+              <mat-icon class="material-symbols-outlined" color="primary">edit</mat-icon>
+            </button>
+            <button mat-icon-button class="mat-icon-btn-sm">
+              <mat-icon class="material-symbols-outlined" color="warn">delete</mat-icon>
+            </button>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>#123900</td>
+        <td>Wade Warren</td>
+        <td>Expense Added</td>
+        <td>82133-EQUIPMENT REN</td>
+        <td>1</td>
+        <td>$20,436.91</td>
+        <td align="center">
+          <div class="d-flex">
+            <button mat-icon-button class="mat-icon-btn-sm">
+              <mat-icon class="material-symbols-outlined" color="primary">edit</mat-icon>
+            </button>
+            <button mat-icon-button class="mat-icon-btn-sm">
+              <mat-icon class="material-symbols-outlined" color="warn">delete</mat-icon>
+            </button>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>#123900</td>
+        <td>Wade Warren</td>
+        <td>Expense Added</td>
+        <td>82133-EQUIPMENT REN</td>
+        <td>1</td>
+        <td>$20,436.91</td>
+        <td align="center">
+          <div class="d-flex">
+            <button mat-icon-button class="mat-icon-btn-sm">
+              <mat-icon class="material-symbols-outlined" color="primary">edit</mat-icon>
+            </button>
+            <button mat-icon-button class="mat-icon-btn-sm">
+              <mat-icon class="material-symbols-outlined" color="warn">delete</mat-icon>
+            </button>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>#123900</td>
+        <td>Wade Warren</td>
+        <td>Expense Added</td>
+        <td>82133-EQUIPMENT REN</td>
+        <td>1</td>
+        <td>$20,436.91</td>
+        <td align="center">
+          <div class="d-flex">
+            <button mat-icon-button class="mat-icon-btn-sm">
+              <mat-icon class="material-symbols-outlined" color="primary">edit</mat-icon>
+            </button>
+            <button mat-icon-button class="mat-icon-btn-sm">
+              <mat-icon class="material-symbols-outlined" color="warn">delete</mat-icon>
+            </button>
+          </div>
+        </td>
+      </tr>
+      <!-- Add more rows as needed -->
+    </tbody>
+  </table>
+</div>
