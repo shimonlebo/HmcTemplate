@@ -18,94 +18,92 @@
     <div [ngClass]="{'col-md-12': !isPdfViewerVisible, 'col-md-6': isPdfViewerVisible}">
       <div class="card mb-4">
         <div class="card-body">
-          <form>
-            <div class="row gx-2 mb-md-2">
-              <div class="col-md-2">
-                <div class="form-group">
-                  <label for="transactionType" class="form-label">Transaction Type</label>
-                  <select class="form-control form-control-sm" id="transactionType">
-                    <option>Bill</option>
-                    <!-- Other options -->
-                  </select>
-                </div>
+          <div class="row gx-2 mb-md-2">
+            <div class="col-md-2">
+              <div class="form-group">
+                <label for="transactionType" class="form-label">Transaction Type</label>
+                <select class="form-control form-control-sm" id="transactionType">
+                  <option>Bill</option>
+                  <!-- Other options -->
+                </select>
               </div>
-              <div class="col-md-2">
-                <div class="form-group">
-                  <label for="dateEntered" class="form-label">Date Entered</label>
-                  <input type="date" class="form-control form-control-sm" id="dateEntered">
-                </div>
-              </div>
-              <div class="col-md-2">
-                <div class="form-group">
-                  <label for="number" class="form-label">Number</label>
-                  <input type="text" class="form-control form-control-sm" id="number">
-                </div>
-              </div>
-              <div class="col-md-2">
-                <div class="form-group">
-                  <label for="receivingNo" class="form-label">Receiving No</label>
-                  <input type="text" class="form-control form-control-sm" id="receivingNo">
-                </div>
-              </div>
-              <div class="col-md-2">
-                <div class="form-group">
-                  <label for="amount" class="form-label">Amount</label>
-                  <input type="text" class="form-control form-control-sm" id="amount">
-                </div>
-              </div>
-              <div class="col-md-2">
-                <div class="form-group">
-                  <label for="amount" class="form-label">Amount</label>
-                  <input type="text" class="form-control form-control-sm" id="amount">
-                </div>
-              </div>
-              <!-- Add other form fields similarly -->
             </div>
-            <div class="row gx-2 mb-md-2">
-              <div class="col-md-2">
-                <div class="form-group">
-                  <label for="amount" class="form-label">Amount</label>
-                  <input type="text" class="form-control form-control-sm" id="amount">
-                </div>
+            <div class="col-md-2">
+              <div class="form-group">
+                <label for="dateEntered" class="form-label">Date Entered</label>
+                <input type="date" class="form-control form-control-sm" id="dateEntered">
               </div>
-              <div class="col-md-2">
-                <div class="form-group">
-                  <label for="dateEntered" class="form-label">Date Entered</label>
-                  <input type="date" class="form-control form-control-sm" id="dateEntered">
-                </div>
-              </div>
-              <div class="col-md-2">
-                <div class="form-group">
-                  <label for="number" class="form-label">Number</label>
-                  <input type="text" class="form-control form-control-sm" id="number">
-                </div>
-              </div>
-              <div class="col-md-2">
-                <div class="form-group">
-                  <label for="receivingNo" class="form-label">Receiving No</label>
-                  <input type="text" class="form-control form-control-sm" id="receivingNo">
-                </div>
-              </div>
-              <div class="col-md-2">
-                <div class="form-group">
-                  <label for="receivingNo" class="form-label">Receiving No</label>
-                  <input type="text" class="form-control form-control-sm" id="receivingNo">
-                </div>
-              </div>
-              <div class="col-md-2">
-                <div class="form-group">
-                  <label for="receivingNo" class="form-label">Receiving No</label>
-                  <input type="text" class="form-control form-control-sm" id="receivingNo">
-                </div>
-              </div>
-              <!-- Add other form fields similarly -->
             </div>
-            <!-- Add more form rows as needed -->
-            <div class="d-flex justify-content-end">
-              <button mat-button type="submit" color="primary">Save</button>
-              <button mat-button color="accent">Cancel</button>
+            <div class="col-md-2">
+              <div class="form-group">
+                <label for="number" class="form-label">Number</label>
+                <input type="text" class="form-control form-control-sm" id="number">
+              </div>
             </div>
-          </form>
+            <div class="col-md-2">
+              <div class="form-group">
+                <label for="receivingNo" class="form-label">Receiving No</label>
+                <input type="text" class="form-control form-control-sm" id="receivingNo">
+              </div>
+            </div>
+            <div class="col-md-2">
+              <div class="form-group">
+                <label for="amount" class="form-label">Amount</label>
+                <input type="text" class="form-control form-control-sm" id="amount">
+              </div>
+            </div>
+            <div class="col-md-2">
+              <div class="form-group">
+                <label for="amount" class="form-label">Amount</label>
+                <input type="text" class="form-control form-control-sm" id="amount">
+              </div>
+            </div>
+            <!-- Add other form fields similarly -->
+          </div>
+          <div class="row gx-2 mb-md-2">
+            <div class="col-md-2">
+              <div class="form-group">
+                <label for="amount" class="form-label">Amount</label>
+                <input type="text" class="form-control form-control-sm" id="amount">
+              </div>
+            </div>
+            <div class="col-md-2">
+              <div class="form-group">
+                <label for="dateEntered" class="form-label">Date Entered</label>
+                <input type="date" class="form-control form-control-sm" id="dateEntered">
+              </div>
+            </div>
+            <div class="col-md-2">
+              <div class="form-group">
+                <label for="number" class="form-label">Number</label>
+                <input type="text" class="form-control form-control-sm" id="number">
+              </div>
+            </div>
+            <div class="col-md-2">
+              <div class="form-group">
+                <label for="receivingNo" class="form-label">Receiving No</label>
+                <input type="text" class="form-control form-control-sm" id="receivingNo">
+              </div>
+            </div>
+            <div class="col-md-2">
+              <div class="form-group">
+                <label for="receivingNo" class="form-label">Receiving No</label>
+                <input type="text" class="form-control form-control-sm" id="receivingNo">
+              </div>
+            </div>
+            <div class="col-md-2">
+              <div class="form-group">
+                <label for="receivingNo" class="form-label">Receiving No</label>
+                <input type="text" class="form-control form-control-sm" id="receivingNo">
+              </div>
+            </div>
+            <!-- Add other form fields similarly -->
+          </div>
+          <!-- Add more form rows as needed -->
+          <div class="d-flex justify-content-end">
+            <button mat-button type="submit" color="primary">Save</button>
+            <button mat-button color="accent">Cancel</button>
+          </div>
         </div>
       </div>
 
