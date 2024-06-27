@@ -1,4 +1,5 @@
-import { Component, EventEmitter, input, output, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, EventEmitter, input, output, inject } from '@angular/core';
+import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { MatIconModule } from '@angular/material/icon';
@@ -12,6 +13,7 @@ import { TableHeaderComponent } from './table-header/table-header.component';
     CommonModule,
     MatIconModule,
     MatButtonModule,
+    MatDialogModule,
     TableHeaderComponent
   ],
   templateUrl: './table.component.html',
