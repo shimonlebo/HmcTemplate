@@ -13,7 +13,6 @@ import { TableComponent } from '../../components/table/table.component';
 })
 export class ItemDetailsComponent {
   isPdfViewerVisible = false;
-  pdfSrc = 'path/to/your/pdf.pdf'; // Update with the path to your PDF file
 
   togglePdfViewer() {
     this.isPdfViewerVisible = !this.isPdfViewerVisible;
