@@ -3,12 +3,6 @@
   font-size: 0.875rem;
 }
 
-// .card-body {
-//   .form-group {
-//     max-width: 200px;
-//   }
-// }
-
 .check-button {
   display: inline-block;
   width: 40px;
@@ -42,6 +36,21 @@
   .mat-icon {
     font-size: 16px;
     height: 15px;
+  }
+}
+
+.dropdown-menu {
+  margin-top: -1rem;
+}
+
+// .mdc-button {
+//   max-width: 150px;
+//   width: 100%;
+// }
+
+.form-group {
+  input, select {
+    background-color: #edf1f7;
   }
 }
 

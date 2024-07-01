@@ -54,4 +54,30 @@ button.mat-icon-btn-sm {
   }
 }
 
+.card {
+  border: none;
+}
 
+.dropdown-menu {
+  display: block;
+  border: none;
+  box-shadow: var(--bs-box-shadow-sm);
+}
+
+.dropdown-item {
+  font-size: 0.9rem;
+
+  &:active, &.active {
+    color: inherit;
+    text-decoration: none;
+    background-color: inherit;
+  }
+
+  label input {
+    margin-right: 0.25rem;
+  }
+}
+
+.search-input {
+  background-color: #edf1f7;
+}
