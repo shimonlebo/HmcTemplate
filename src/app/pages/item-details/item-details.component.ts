@@ -38,18 +38,14 @@ export class ItemDetailsComponent {
   isOpen = false;
   isPdfViewerVisible = false;
   options: Option[] = [
-    { id: 'option1', name: 'Option 1', selected: false },
-    { id: 'option2', name: 'Option 2', selected: false },
-    { id: 'option3', name: 'Option 3', selected: false },
+    { id: 'account', name: 'Account', selected: false },
+    { id: 'audit_log', name: 'Audit Log', selected: false },
+    { id: 'previous_bills', name: 'Vendor Previous Bills', selected: false },
+    { id: 'address', name: 'Vendor Address', selected: false },
   ];
 
   togglePdfViewer() {
     this.isPdfViewerVisible = !this.isPdfViewerVisible;
-  }
-
-  onCheckboxChange1(option: Option, checked: boolean) {
-    option.selected = checked;
-    console.log(`${option.name} is now ${checked ? 'selected' : 'unselected'}`);
   }
 
   onCheckboxChange(option: Option) {

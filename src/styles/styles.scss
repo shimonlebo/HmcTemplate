@@ -8,6 +8,7 @@ body {
 }
 body {
   margin: 0;
+  font-size: 0.9rem;
   font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 
@@ -67,7 +68,8 @@ button.mat-icon-btn-sm {
 .dropdown-item {
   font-size: 0.9rem;
 
-  &:active, &.active {
+  &:active,
+  &.active {
     color: inherit;
     text-decoration: none;
     background-color: inherit;
@@ -88,4 +90,25 @@ button.mat-icon-btn-sm {
 
 .fs-small {
   font-size: small;
+}
+
+.card-sm {
+  .card-header,
+  .card-footer {
+    padding: 0.5rem 0.5rem;
+  }
+
+  h5 {
+    font-weight: 500;
+    font-size: 1rem;
+    margin-bottom: 0;
+  }
+}
+
+.text-right {
+  text-align: right;
+}
+
+.sticky-top {
+  z-index: 999;
 }

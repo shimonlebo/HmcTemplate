@@ -11,7 +11,7 @@
   </mat-toolbar>
 
   <!-- Main Content Area -->
-  <div class="row">    
+  <div class="row">
     <div [ngClass]="{'col-md-12': !isPdfViewerVisible, 'col-md-6': isPdfViewerVisible}">
       <div class="card shadow-sm mb-4">
         <div class="card-body">
@@ -95,7 +95,8 @@
               </div>
               <div class="card shadow-sm mt-2">
                 <div class="card-body d-flex align-items-center p-2">
-                  <img src="../../../assets/images/example-pdf-img.png" class="me-2 object-fit-cover" width="40" height="40">
+                  <img src="../../../assets/images/example-pdf-img.png" class="me-2 object-fit-cover" width="40"
+                    height="40">
                   <span class="me-2 text-truncate fs-small">Bill Page 1</span>
                   <button mat-icon-button class="mat-icon-btn-sm">
                     <mat-icon class="material-symbols-outlined">rotate_right</mat-icon>
@@ -104,7 +105,7 @@
                     <mat-icon class="material-symbols-outlined">rotate_left</mat-icon>
                   </button>
                   <mat-icon class="material-symbols-outlined icon-sm">drag_indicator</mat-icon>
-                </div>              
+                </div>
               </div>
             </div>
             <div class="col d-flex align-items-end justify-content-end">
@@ -131,37 +132,72 @@
         </div>
       </div>
 
-      <mat-toolbar class="bg-inherit p-0">        
+      <mat-toolbar class="bg-inherit p-0">
         <div class="dropdown">
           <button (click)="toggleDropdown()" mat-icon-button class="my-3">
             <mat-icon class="material-symbols-outlined">settings</mat-icon>
           </button>
           @if (isOpen) {
-            <div class="dropdown-menu settings-menu">
-              @for (option of options; track $index) {
-                <div class="dropdown-item">
-                  <label>
-                    <input type="checkbox" 
-                          [(ngModel)]="option.selected" 
-                          (change)="onCheckboxChange(option)">
-                    {{option.name}}
-                  </label>
-                </div>
-              }              
+          <div class="dropdown-menu settings-menu">
+            @for (option of options; track $index) {
+            <div class="dropdown-item">
+              <label>
+                <input type="checkbox" [(ngModel)]="option.selected" (change)="onCheckboxChange(option)">
+                {{option.name}}
+              </label>
             </div>
+            }
+          </div>
           }
         </div>
-      </mat-toolbar>      
+      </mat-toolbar>
 
       <!-- Account Info, Audit Log, Vendor Info -->
       <div class="row">
         <div class="col">
-          <div class="card shadow-sm mb-4">
-            <div class="card-header">
+          <div class="card card-sm shadow-sm mb-4">
+            <div class="card-header bg-white">
               <h5>Account</h5>
             </div>
-            <div class="card-body table-responsive p-0" style="max-height: 160px;">
-              card content
+            <div class="card-body p-0">
+              <div class="table-responsive" style="max-height: 160px;">
+                <table class="table">
+                  <thead class="sticky-top">
+                    <tr>
+                      <th class="text-body-secondary">Account</th>
+                      <th class="text-body-secondary text-right">Amount</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>#82133</td>
+                      <td align="right">$20,436.45</td>
+                    </tr>
+                    <tr>
+                      <td>#82133</td>
+                      <td align="right">$20,436.45</td>
+                    </tr>
+                    <tr>
+                      <td>#82133</td>
+                      <td align="right">$20,436.45</td>
+                    </tr>
+                    <tr>
+                      <td>#82133</td>
+                      <td align="right">$20,436.45</td>
+                    </tr>
+                  </tbody>
+                  <!-- <tfoot>
+                    <tr>
+                      <td>Subtotal:</td>
+                      <td>$195.65</td>
+                    </tr>
+                  </tfoot> -->
+                </table>
+              </div>
+            </div>
+            <div class="card-footer d-flex justify-content-between bg-primary-subtle">
+              <span class="text-primary">Subtotal:</span>
+              <span class="text-primary">$20,436.45</span>
             </div>
           </div>
         </div>
@@ -198,12 +234,12 @@
       </div>
     </div>
     <!-- Column 2 (PDF Viewer) -->
-     @if (isPdfViewerVisible) {
-      <div class="col-md-6">
-        <div class="pdf-viewer">
-          <app-pdf-viewer></app-pdf-viewer>
-        </div>
+    @if (isPdfViewerVisible) {
+    <div class="col-md-6">
+      <div class="pdf-viewer">
+        <app-pdf-viewer></app-pdf-viewer>
       </div>
-    }    
+    </div>
+    }
   </div>
 </div>
