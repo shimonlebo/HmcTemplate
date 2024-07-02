@@ -15,7 +15,7 @@
     <div [ngClass]="{'col-md-12': !isPdfViewerVisible, 'col-md-6': isPdfViewerVisible}">
       <div class="card shadow-sm mb-4">
         <div class="card-body">
-          <div class="row gx-3">
+          <div class="row g-3 detail-cols">
             <div class="col">
               <div class="form-group mb-2">
                 <label for="transactionType" class="form-label text-body-secondary">Transaction Type</label>
@@ -123,19 +123,19 @@
               </div>
             </div>
             <div class="col d-grid">
-              <button mat-raised-button extended color="warn">
+              <button mat-raised-button extended color="warn" class="mb-2">
                 <mat-icon class="material-symbols-outlined">delete</mat-icon>
                 Delete Bill
               </button>
-              <button mat-raised-button extended color="secondary">
+              <button mat-raised-button extended color="secondary" class="mb-2">
                 <mat-icon class="material-symbols-outlined">move_groups</mat-icon>
                 Move Bill
               </button>
-              <button mat-raised-button extended color="secondary">
+              <button mat-raised-button extended color="secondary" class="mb-2">
                 <mat-icon class="material-symbols-outlined">file_copy</mat-icon>
                 Copy Bill
               </button>
-              <button mat-raised-button extended color="primary">
+              <button mat-raised-button extended color="primary" class="mb-2">
                 <mat-icon class="material-symbols-outlined">check</mat-icon>
                 Approved
               </button>
