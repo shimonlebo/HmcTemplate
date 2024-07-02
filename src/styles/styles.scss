@@ -45,7 +45,7 @@ button.mat-icon-btn-sm {
 
   mat-icon {
     font-size: 16px;
-    line-height: 25px;
+    line-height: 24px;
   }
 
   .mat-mdc-button-touch-target {
@@ -84,4 +84,8 @@ button.mat-icon-btn-sm {
 
 .card-footer {
   border: none;
+}
+
+.fs-small {
+  font-size: small;
 }

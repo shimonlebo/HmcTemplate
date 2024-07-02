@@ -75,7 +75,7 @@
             </div>
             <div class="col">
               <div class="form-group">
-                <div class="d-flex">
+                <div class="d-flex align-items-center">
                   <label for="file" class="form-label text-body-secondary">File Upload</label>
                   <span class="spacer"></span>
                   <button mat-icon-button class="mat-icon-btn-sm">
@@ -92,6 +92,19 @@
                   </button>
                 </div>
                 <input type="file" class="form-control form-control-sm" id="file">
+              </div>
+              <div class="card shadow-sm mt-2">
+                <div class="card-body d-flex align-items-center p-2">
+                  <img src="../../../assets/images/example-pdf-img.png" class="me-2 object-fit-cover" width="40" height="40">
+                  <span class="me-2 text-truncate fs-small">Bill Page 1</span>
+                  <button mat-icon-button class="mat-icon-btn-sm">
+                    <mat-icon class="material-symbols-outlined">rotate_right</mat-icon>
+                  </button>
+                  <button mat-icon-button class="mat-icon-btn-sm">
+                    <mat-icon class="material-symbols-outlined">rotate_left</mat-icon>
+                  </button>
+                  <mat-icon class="material-symbols-outlined icon-sm">drag_indicator</mat-icon>
+                </div>              
               </div>
             </div>
             <div class="col d-flex align-items-end justify-content-end">
@@ -124,7 +137,7 @@
             <mat-icon class="material-symbols-outlined">settings</mat-icon>
           </button>
           @if (isOpen) {
-            <div class="dropdown-menu">
+            <div class="dropdown-menu settings-menu">
               @for (option of options; track $index) {
                 <div class="dropdown-item">
                   <label>

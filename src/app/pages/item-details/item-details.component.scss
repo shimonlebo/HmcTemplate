@@ -39,7 +39,7 @@
   }
 }
 
-.dropdown-menu {
+.settings-menu {
   margin-top: -1rem;
 }
 
@@ -52,5 +52,15 @@
   input, select {
     background-color: #edf1f7;
   }
+}
+
+.icon-sm {
+  font-size: 16px;
+  display: grid;
+  place-items: center;
+  height: 27px;
+  width: 27px;
+  cursor: grab;
+  line-height: 28px;
 }
 
