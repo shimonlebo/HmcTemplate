@@ -121,3 +121,24 @@ button.mat-icon-btn-sm {
 .fw-semibold {
   font-weight: 500 !important;
 }
+
+.form-label {
+  margin-bottom: calc(0.25rem + var(--bs-border-width));
+  font-size: 0.875rem;
+}
+
+.form-group {
+  input, select {
+    background-color: #edf1f7;
+  }
+}
+
+.icon-sm {
+  font-size: 16px;
+  display: grid;
+  place-items: center;
+  height: 27px;
+  width: 27px;
+  cursor: grab;
+  line-height: 28px;
+}

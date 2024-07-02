@@ -22,5 +22,6 @@ import { TableHeaderComponent } from './table-header/table-header.component';
 export class TableComponent {
   responsive = input<boolean>();
   maxTableHeight = input<string>();
+  addFilter = true;
 
 }

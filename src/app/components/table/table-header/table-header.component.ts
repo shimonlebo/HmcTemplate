@@ -1,11 +1,13 @@
-import { Component, EventEmitter, input, output, inject } from '@angular/core';
+import { Component, input, output } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
 
 @Component({
   selector: 'app-table-header',
   standalone: true,
   imports: [
-    MatIconModule
+    MatIconModule,
+    MatButtonModule
   ],
   templateUrl: './table-header.component.html',
   styleUrl: './table-header.component.scss'
@@ -13,4 +15,11 @@ import { MatIconModule } from '@angular/material/icon';
 export class TableHeaderComponent {
   headerText = input<string>();
   addFilter = input<boolean>();
+  filterClicked = output();
+  isOpen = false;
+
+  onFilterClick() {
+    this.isOpen = !this.isOpen;
+    this.filterClicked.emit();
+  }
 }

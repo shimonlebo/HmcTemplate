@@ -1,44 +1,3 @@
-.form-label {
-  margin-bottom: calc(0.25rem + var(--bs-border-width));
-  font-size: 0.875rem;
-}
-
-.check-button {
-  display: inline-block;
-  width: 40px;
-  height: 40px;
-  background-color: #fff;
-  border: none;
-  border-radius: 50%;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background-color 0.2s ease-in-out;
-}
-
-.check-button mat-icon {
-  color: #333;
-  line-height: 40px;
-  text-align: center;
-}
-
-.small-icon-button {
-  width: 24px;
-  height: 24px;
-  min-width: 24px;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-
-  // &:hover {
-  //   background-color: #e0e0e0;
-  // }
-
-  .mat-icon {
-    font-size: 16px;
-    height: 15px;
-  }
-}
-
 .settings-menu {
   margin-top: -1rem;
 }
@@ -47,22 +6,6 @@
 //   max-width: 150px;
 //   width: 100%;
 // }
-
-.form-group {
-  input, select {
-    background-color: #edf1f7;
-  }
-}
-
-.icon-sm {
-  font-size: 16px;
-  display: grid;
-  place-items: center;
-  height: 27px;
-  width: 27px;
-  cursor: grab;
-  line-height: 28px;
-}
 
 .detail-cols {
   .col {

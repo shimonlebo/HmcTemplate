@@ -1,0 +1,20 @@
+th {
+  overflow: auto;
+  min-width: 168px;
+}
+
+.form-group {
+  input, select {
+    background-color: #edf1f7;
+  }
+}
+
+.icon-sm {
+  font-size: 16px;
+  display: grid;
+  place-items: center;
+  height: 27px;
+  width: 27px;
+  cursor: grab;
+  line-height: 28px;
+}

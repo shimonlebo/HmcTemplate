@@ -9,6 +9,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatDividerModule } from '@angular/material/divider';
 import { PdfViewerComponent } from '../../components/pdf-viewer/pdf-viewer.component';
+import { TableHeaderComponent } from '../../components/table/table-header/table-header.component';
 import { TableComponent } from '../../components/table/table.component';
 
 interface Option {
@@ -32,6 +33,7 @@ interface Option {
     MatIconModule,
     PdfViewerComponent, 
     TableComponent,
+    TableHeaderComponent
   ],
   templateUrl: './item-details.component.html',
   styleUrls: ['./item-details.component.scss']

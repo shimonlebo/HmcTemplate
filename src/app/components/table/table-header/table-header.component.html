@@ -1,6 +1,20 @@
 <div class="filter-header">
-  <span class="text-body-secondary">{{ headerText() }}</span>
+  <span class="text-body-secondary text-truncate">{{ headerText() }}</span>
   @if (addFilter()) {
-    <mat-icon class="material-symbols-outlined filter-icon">filter_list</mat-icon>
+    <div class="dropdown">
+      <button mat-icon-button class="mat-icon-btn-sm" (click)="onFilterClick()">
+        <mat-icon class="material-symbols-outlined">filter_list</mat-icon>
+      </button>
+      @if (isOpen) {
+        <div class="dropdown-menu shadow">
+          <div class="dropdown-item">
+            <label>
+              <input type="checkbox">
+              Option 1
+            </label>
+          </div>
+        </div>
+      }                
+    </div>
   }  
 </div>
