@@ -6,6 +6,7 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
+import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatDividerModule } from '@angular/material/divider';
 import { PdfViewerComponent } from '../../components/pdf-viewer/pdf-viewer.component';
 import { TableComponent } from '../../components/table/table.component';
@@ -27,6 +28,7 @@ interface Option {
     MatDividerModule,
     MatCheckboxModule,
     MatButtonModule,
+    MatTooltipModule,
     MatIconModule,
     PdfViewerComponent, 
     TableComponent,
