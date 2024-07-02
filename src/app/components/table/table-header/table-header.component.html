@@ -1,5 +1,10 @@
-<div class="filter-header">
-  <span class="text-body-secondary text-truncate">{{ headerText() }}</span>
+<div class="d-flex align-items-center">
+  <span class="text-body-secondary text-truncate flex-fill">{{ headerText() }}</span>
+  @if (addSort()) {
+    <button mat-icon-button class="mat-icon-btn-sm" (click)="onSortClick()">
+      <mat-icon class="material-symbols-outlined">{{ sortUp ? 'north' : 'south' }}</mat-icon>
+    </button>
+  }
   @if (addFilter()) {
     <div class="dropdown">
       <button mat-icon-button class="mat-icon-btn-sm" (click)="onFilterClick()">
