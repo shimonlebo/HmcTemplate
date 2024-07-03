@@ -105,7 +105,7 @@
                     <button mat-icon-button class="mat-icon-btn-sm">
                       <mat-icon class="material-symbols-outlined">rotate_left</mat-icon>
                     </button>
-                    <mat-icon class="material-symbols-outlined icon-sm">drag_indicator</mat-icon>
+                    <mat-icon class="material-symbols-outlined icon-sm cursor-grab">drag_indicator</mat-icon>
                   </div>
                   <div class="d-flex align-items-center">
                     <img src="../../../assets/images/example-pdf-img.png" class="me-2 object-fit-cover" width="40"
@@ -182,11 +182,11 @@
       </mat-toolbar>
 
       <!-- Account Info, Audit Log, Vendor Info -->
-      <div class="row">
-        <div class="col">
-          <div class="card card-sm shadow-sm">
-            <div class="card-header bg-white">
-              <h5>Account</h5>
+      <div class="row g-3 settings-cards">
+        <div class="col-12 col-sm-6 col-xl-3">
+          <div class="card shadow-sm">
+            <div class="card-header">
+              Accounts
             </div>
             <div class="card-body p-0">
               <div class="table-responsive" style="max-height: 160px;">
@@ -234,42 +234,80 @@
             </div>
           </div>
         </div>
-        <div class="col">
-          <div class="card card-sm shadow-sm">
-            <div class="card-header bg-white">
-              <h5>Audit Log</h5>
+        <div class="col-12 col-sm-6 col-xl-3">
+          <div class="card shadow-sm">
+            <div class="card-header">
+              Audit Logs
             </div>
             <div class="card-body">
-              card content
-            </div>
-            <div class="card-footer bg-white">
-              card footer
+              <p class="text-primary">Approved</p>
+              <p class="text-muted">05/02/2023 9:51 AM</p>
+              <i>Filed</i>    
+              <hr>
+              <p class="text-primary">Approved</p>
+              <p class="text-muted">05/02/2023 9:51 AM</p>
+              <i>Filed</i> 
             </div>
           </div>
         </div>
-        <div class="col">
-          <div class="card card-sm shadow-sm">
-            <div class="card-header bg-white">
-              <h5>Vendor Previous Bills</h5>
+        <div class="col-12 col-sm-6 col-xl-3">
+          <div class="card shadow-sm">
+            <div class="card-header">
+              Vendor Previous Bills
             </div>
             <div class="card-body">
-              card content
-            </div>
-            <div class="card-footer bg-white">
-              card footer
+              <div class="row">
+                <div class="col-8">
+                  <p>#230502</p>
+                  <p class="text-muted">05/02/2023</p>
+                  <i>Filed</i>
+                </div>
+                <div class="col-4 text-right">
+                  <p class="text-primary">$298.16</p>
+                  <div class="d-flex justify-content-end">
+                    <button mat-icon-button class="mat-icon-btn-sm">
+                      <mat-icon class="material-symbols-outlined">attach_file</mat-icon>
+                    </button>
+                    <button mat-icon-button class="mat-icon-btn-sm">
+                      <mat-icon class="material-symbols-outlined">download</mat-icon>
+                    </button>
+                  </div>
+                </div>
+              </div>          
+              <hr>
+              <div class="row">
+                <div class="col-8">
+                  <p>#230502</p>
+                  <p class="text-muted">05/02/2023</p>
+                  <i>Filed</i>
+                </div>
+                <div class="col-4 text-right">
+                  <p class="text-primary">$298.16</p>
+                  <div class="d-flex justify-content-end">
+                    <button mat-icon-button class="mat-icon-btn-sm">
+                      <mat-icon class="material-symbols-outlined">attach_file</mat-icon>
+                    </button>
+                    <button mat-icon-button class="mat-icon-btn-sm">
+                      <mat-icon class="material-symbols-outlined">download</mat-icon>
+                    </button>
+                  </div>
+                </div>
+              </div>   
             </div>
           </div>
         </div>
-        <div class="col">
-          <div class="card card-sm shadow-sm">
-            <div class="card-header bg-white">
-              <h5>Vendor Address</h5>
+        <div class="col-12 col-sm-6 col-xl-3">
+          <div class="card shadow-sm">
+            <div class="card-header">
+              Vendor Address
             </div>
             <div class="card-body">
-              card content
-            </div>
-            <div class="card-footer bg-white">
-              card footer
+              <p class="d-flex align-items-center">
+                <span class="material-symbols-outlined icon-sm me-2">location_on</span>
+                <span class="fw-semibold">Suddenlink 112949-02-8 ,</span>
+              </p>
+              <p>Account No: <span class="fw-semibold">#</span></p>
+              <p>Open Balance: <span class="fw-semibold">$298.16</span></p>
             </div>
           </div>
         </div>
