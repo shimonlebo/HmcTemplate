@@ -1,0 +1,21 @@
+.file-preview {
+  max-height: 192px;
+  overflow: auto;
+  margin-top: 5px;
+  padding: 0.5rem 0.25rem;
+
+  .file-preview-item {
+    display: flex;
+    align-items: center;
+
+    &:not(:only-child, :last-child) {
+      margin-bottom: 10px;
+    }
+
+    img {
+      width: 50px;
+      height: 50px;
+      margin-right: 7px;
+    }
+  }
+}

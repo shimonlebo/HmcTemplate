@@ -11,6 +11,7 @@ import { MatDividerModule } from '@angular/material/divider';
 import { PdfViewerComponent } from '../../components/pdf-viewer/pdf-viewer.component';
 import { TableHeaderComponent } from '../../components/table/table-header/table-header.component';
 import { TableComponent } from '../../components/table/table.component';
+import { FileUploadComponent } from '../../components/file-upload/file-upload.component';
 
 interface Option {
   id: string;
@@ -22,18 +23,19 @@ interface Option {
   selector: 'app-item-details',
   standalone: true,
   imports: [
-    CommonModule, 
+    CommonModule,
     FormsModule,
-    MatToolbarModule, 
+    MatToolbarModule,
     MatMenuModule,
     MatDividerModule,
     MatCheckboxModule,
     MatButtonModule,
     MatTooltipModule,
     MatIconModule,
-    PdfViewerComponent, 
+    PdfViewerComponent,
     TableComponent,
-    TableHeaderComponent
+    TableHeaderComponent,
+    FileUploadComponent
   ],
   templateUrl: './item-details.component.html',
   styleUrls: ['./item-details.component.scss']
@@ -58,5 +60,10 @@ export class ItemDetailsComponent {
 
   toggleDropdown() {
     this.isOpen = !this.isOpen;
+  }
+
+  handleFiles(files: File[]) {
+    console.log('Selected files:', files);
+    // Handle the files as needed
   }
 }

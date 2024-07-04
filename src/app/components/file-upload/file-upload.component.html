@@ -1,0 +1,27 @@
+<div class="form-group" (drop)="onFileDrop($event)">
+  <label for="fileInput" class="form-label text-body-secondary">File Upload</label>
+  <input id="fileInput" #fileInput type="file" class="form-control form-control-sm" (change)="onFileSelect($event)"
+    [attr.multiple]="multiple() ? true : null" [attr.accept]="acceptedTypes()" />
+</div>
+@if (files.length > 0) {
+<div class="file-preview shadow-sm rounded">
+  @for (file of files; track $index) {
+  <div class="file-preview-item">
+    @if (isImage(file)) {
+    <img [src]="file.preview" alt="File Preview" class="shadow-sm" />
+    }
+    <span class="text-truncate fs-small flex-fill">{{ file.name }} ({{ formatFileSize(file.size) }})</span>
+    <button mat-icon-button class="mat-icon-btn-sm" (click)="removeFile($index)">
+      <mat-icon class="material-symbols-outlined" color="warn">delete</mat-icon>
+    </button>
+    <button mat-icon-button class="mat-icon-btn-sm">
+      <mat-icon class="material-symbols-outlined">rotate_right</mat-icon>
+    </button>
+    <button mat-icon-button class="mat-icon-btn-sm">
+      <mat-icon class="material-symbols-outlined">rotate_left</mat-icon>
+    </button>
+    <span class="material-symbols-outlined icon-sm cursor-grab">drag_indicator</span>
+  </div>
+  }
+</div>
+}
