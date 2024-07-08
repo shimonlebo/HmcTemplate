@@ -1,16 +1,24 @@
 .settings-menu {
-  margin-top: -1rem;
+  //margin-top: -1rem;
+  left: 0;
+  top: 65px;
 }
 
-// .mdc-button {
-//   max-width: 150px;
-//   width: 100%;
-// }
+.form-group {
+  max-width: 210px;
+}
 
 .detail-cols {
   .col {
-    min-width: 315px;
-    max-width: 400px;
+    // min-width: 315px;
+    // max-width: 400px;
+    max-width: fit-content;
+  }
+
+  .col:last-child {
+    justify-content: end;
+    align-items: center;
+    max-width: 100%;
   }
 }
 
@@ -26,5 +34,32 @@
 
   p {
     margin-bottom: 0;
+  }
+}
+
+.vertical-nav-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f0f0f0;
+  width: 40px;
+  cursor: pointer;
+  padding: 5px;
+
+  .vertical-text {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    transform: rotate(180deg);
+    margin-top: 10px;
+    font-size: 12px;
+    text-transform: uppercase;
+  }
+
+  mat-icon {
+    font-size: 24px;
+    height: 24px;
+    width: 24px;
   }
 }

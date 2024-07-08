@@ -105,9 +105,25 @@
       </div>
 
       <!-- Item List Table -->
-      <div class="card shadow-sm">
-        <div class="card-body p-0">
-          <app-table [maxTableHeight]="'160px'" [responsive]="true"></app-table>
+      <div class="card shadow-sm mb-4">
+        <div class="card-body d-flex p-0">
+          <div class="vertical-nav-item">
+            <mat-icon class="material-symbols-outlined" (click)="toggleDropdown()">settings</mat-icon>
+            <span class="vertical-text">Settings</span>
+            @if (isOpen) {
+              <div class="dropdown-menu settings-menu">
+                @for (option of options; track $index) {
+                <div class="dropdown-item">
+                  <label>
+                    <input type="checkbox" [(ngModel)]="option.selected" (change)="onCheckboxChange(option)">
+                    {{option.name}}
+                  </label>
+                </div>
+                }
+              </div>
+              }
+          </div>
+          <app-table [maxTableHeight]="'160px'" [responsive]="true" class="flex-fill"></app-table>
         </div>
         <div class="card-footer d-flex justify-content-end">
           <div style="font-size: 0.9rem; gap: 1rem;" class="d-flex">
@@ -119,26 +135,6 @@
           </div>
         </div>
       </div>
-
-      <mat-toolbar class="bg-inherit p-0">
-        <div class="dropdown">
-          <button (click)="toggleDropdown()" mat-icon-button matTooltip="Settings" class="my-3">
-            <mat-icon class="material-symbols-outlined">settings</mat-icon>
-          </button>
-          @if (isOpen) {
-          <div class="dropdown-menu settings-menu">
-            @for (option of options; track $index) {
-            <div class="dropdown-item">
-              <label>
-                <input type="checkbox" [(ngModel)]="option.selected" (change)="onCheckboxChange(option)">
-                {{option.name}}
-              </label>
-            </div>
-            }
-          </div>
-          }
-        </div>
-      </mat-toolbar>
 
       <!-- Account Info, Audit Log, Vendor Info -->
       <div class="row g-3 settings-cards">
