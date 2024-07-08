@@ -106,23 +106,7 @@
 
       <!-- Item List Table -->
       <div class="card shadow-sm mb-4">
-        <div class="card-body d-flex p-0">
-          <div class="vertical-nav-item">
-            <mat-icon class="material-symbols-outlined" (click)="toggleDropdown()">settings</mat-icon>
-            <span class="vertical-text">Settings</span>
-            @if (isOpen) {
-              <div class="dropdown-menu settings-menu">
-                @for (option of options; track $index) {
-                <div class="dropdown-item">
-                  <label>
-                    <input type="checkbox" [(ngModel)]="option.selected" (change)="onCheckboxChange(option)">
-                    {{option.name}}
-                  </label>
-                </div>
-                }
-              </div>
-              }
-          </div>
+        <div class="card-body p-0">
           <app-table [maxTableHeight]="'160px'" [responsive]="true" class="flex-fill"></app-table>
         </div>
         <div class="card-footer d-flex justify-content-end">
@@ -137,132 +121,150 @@
       </div>
 
       <!-- Account Info, Audit Log, Vendor Info -->
-      <div class="row g-3 settings-cards">
-        <div class="col-12 col-sm-6 col-xl-3">
-          <div class="card shadow-sm">
-            <div class="card-header">
-              Accounts
+      <div class="d-flex">
+        <div class="vertical-nav-item shadow-sm me-3">
+          <mat-icon class="material-symbols-outlined" (click)="toggleDropdown()">settings</mat-icon>
+          <span class="vertical-text">Settings</span>
+          @if (isOpen) {
+            <div class="dropdown-menu settings-menu shadow">
+              @for (option of options; track $index) {
+              <div class="dropdown-item">
+                <label>
+                  <input type="checkbox" [(ngModel)]="option.selected" (change)="onCheckboxChange(option)">
+                  {{option.name}}
+                </label>
+              </div>
+              }
             </div>
-            <div class="card-body p-0">
-              <div class="table-responsive" style="max-height: 160px;">
-                <table class="table">
-                  <thead class="sticky-top">
-                    <tr>
-                      <th>
-                        <app-table-header [headerText]="'Account'" [addFilter]="true" [addSort]="false"></app-table-header>
-                      </th>
-                      <th>
-                        <app-table-header [headerText]="'Amount'" [addFilter]="true" [addSort]="false"></app-table-header>
-                      </th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>#82133</td>
-                      <td align="right">$20,436.45</td>
-                    </tr>
-                    <tr>
-                      <td>#82133</td>
-                      <td align="right">$20,436.45</td>
-                    </tr>
-                    <tr>
-                      <td>#82133</td>
-                      <td align="right">$20,436.45</td>
-                    </tr>
-                    <tr>
-                      <td>#82133</td>
-                      <td align="right">$20,436.45</td>
-                    </tr>
-                  </tbody>
-                  <!-- <tfoot>
-                    <tr>
-                      <td>Subtotal:</td>
-                      <td>$195.65</td>
-                    </tr>
-                  </tfoot> -->
-                </table>
+            }
+        </div>
+        <div class="row g-3 settings-cards flex-fill">
+          <div class="col-12 col-sm-6 col-xl-3">
+            <div class="card shadow-sm">
+              <div class="card-header">
+                Accounts
+              </div>
+              <div class="card-body p-0">
+                <div class="table-responsive" style="max-height: 160px;">
+                  <table class="table">
+                    <thead class="sticky-top">
+                      <tr>
+                        <th>
+                          <app-table-header [headerText]="'Account'" [addFilter]="true" [addSort]="false"></app-table-header>
+                        </th>
+                        <th>
+                          <app-table-header [headerText]="'Amount'" [addFilter]="true" [addSort]="false"></app-table-header>
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>#82133</td>
+                        <td align="right">$20,436.45</td>
+                      </tr>
+                      <tr>
+                        <td>#82133</td>
+                        <td align="right">$20,436.45</td>
+                      </tr>
+                      <tr>
+                        <td>#82133</td>
+                        <td align="right">$20,436.45</td>
+                      </tr>
+                      <tr>
+                        <td>#82133</td>
+                        <td align="right">$20,436.45</td>
+                      </tr>
+                    </tbody>
+                    <!-- <tfoot>
+                      <tr>
+                        <td>Subtotal:</td>
+                        <td>$195.65</td>
+                      </tr>
+                    </tfoot> -->
+                  </table>
+                </div>
+              </div>
+              <div class="card-footer d-flex justify-content-between">
+                <span class="text-muted">Subtotal:</span>
+                <span class="text-primary">$20,436.45</span>
               </div>
             </div>
-            <div class="card-footer d-flex justify-content-between">
-              <span class="text-muted">Subtotal:</span>
-              <span class="text-primary">$20,436.45</span>
+          </div>
+          <div class="col-12 col-sm-6 col-xl-3">
+            <div class="card shadow-sm">
+              <div class="card-header">
+                Audit Logs
+              </div>
+              <div class="card-body">
+                <p class="text-primary">Approved</p>
+                <p class="text-muted">05/02/2023 9:51 AM</p>
+                <i>Filed</i>
+                <hr>
+                <p class="text-primary">Approved</p>
+                <p class="text-muted">05/02/2023 9:51 AM</p>
+                <i>Filed</i>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="col-12 col-sm-6 col-xl-3">
-          <div class="card shadow-sm">
-            <div class="card-header">
-              Audit Logs
-            </div>
-            <div class="card-body">
-              <p class="text-primary">Approved</p>
-              <p class="text-muted">05/02/2023 9:51 AM</p>
-              <i>Filed</i>    
-              <hr>
-              <p class="text-primary">Approved</p>
-              <p class="text-muted">05/02/2023 9:51 AM</p>
-              <i>Filed</i> 
-            </div>
-          </div>
-        </div>
-        <div class="col-12 col-sm-6 col-xl-3">
-          <div class="card shadow-sm">
-            <div class="card-header">
-              Vendor Previous Bills
-            </div>
-            <div class="card-body">
-              <div class="row">
-                <div class="col-8">
-                  <p>#230502</p>
-                  <p class="text-muted">05/02/2023</p>
-                  <i>Filed</i>
-                </div>
-                <div class="col-4 text-right">
-                  <p class="text-primary">$298.16</p>
-                  <div class="d-flex justify-content-end">
-                    <button mat-icon-button class="mat-icon-btn-sm">
-                      <mat-icon class="material-symbols-outlined">attach_file</mat-icon>
-                    </button>
-                    <button mat-icon-button class="mat-icon-btn-sm">
-                      <mat-icon class="material-symbols-outlined">download</mat-icon>
-                    </button>
+          <div class="col-12 col-sm-6 col-xl-3">
+            <div class="card shadow-sm">
+              <div class="card-header">
+                Vendor Previous Bills
+              </div>
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-8">
+                    <p>#230502</p>
+                    <p class="text-muted">05/02/2023</p>
+                    <i>Filed</i>
+                  </div>
+                  <div class="col-4 text-right">
+                    <p class="text-primary">$298.16</p>
+                    <div class="d-flex justify-content-end">
+                      <button mat-icon-button class="mat-icon-btn-sm">
+                        <mat-icon class="material-symbols-outlined">attach_file</mat-icon>
+                      </button>
+                      <button mat-icon-button class="mat-icon-btn-sm">
+                        <mat-icon class="material-symbols-outlined">download</mat-icon>
+                      </button>
+                    </div>
                   </div>
                 </div>
-              </div>          
-              <hr>
-              <div class="row">
-                <div class="col-8">
-                  <p>#230502</p>
-                  <p class="text-muted">05/02/2023</p>
-                  <i>Filed</i>
-                </div>
-                <div class="col-4 text-right">
-                  <p class="text-primary">$298.16</p>
-                  <div class="d-flex justify-content-end">
-                    <button mat-icon-button class="mat-icon-btn-sm">
-                      <mat-icon class="material-symbols-outlined">attach_file</mat-icon>
-                    </button>
-                    <button mat-icon-button class="mat-icon-btn-sm">
-                      <mat-icon class="material-symbols-outlined">download</mat-icon>
-                    </button>
+                <hr>
+                <div class="row">
+                  <div class="col-8">
+                    <p>#230502</p>
+                    <p class="text-muted">05/02/2023</p>
+                    <i>Filed</i>
+                  </div>
+                  <div class="col-4 text-right">
+                    <p class="text-primary">$298.16</p>
+                    <div class="d-flex justify-content-end">
+                      <button mat-icon-button class="mat-icon-btn-sm">
+                        <mat-icon class="material-symbols-outlined">attach_file</mat-icon>
+                      </button>
+                      <button mat-icon-button class="mat-icon-btn-sm">
+                        <mat-icon class="material-symbols-outlined">download</mat-icon>
+                      </button>
+                    </div>
                   </div>
                 </div>
-              </div>   
+              </div>
             </div>
           </div>
-        </div>
-        <div class="col-12 col-sm-6 col-xl-3">
-          <div class="card shadow-sm">
-            <div class="card-header">
-              Vendor Address
-            </div>
-            <div class="card-body">
-              <p class="d-flex align-items-center">
-                <span class="material-symbols-outlined icon-sm me-2">location_on</span>
-                <span class="fw-semibold">Suddenlink 112949-02-8 ,</span>
-              </p>
-              <p>Account No: <span class="fw-semibold">#</span></p>
-              <p>Open Balance: <span class="fw-semibold">$298.16</span></p>
+          <div class="col-12 col-sm-6 col-xl-3">
+            <div class="card shadow-sm">
+              <div class="card-header">
+                Vendor Address
+              </div>
+              <div class="card-body">
+                <p class="d-flex align-items-center">
+                  <span class="material-symbols-outlined icon-sm me-2">location_on</span>
+                  <span class="fw-semibold">Suddenlink 112949-02-8 ,</span>
+                </p>
+                <p>Account No: <span class="fw-semibold">#</span></p>
+                <p>Open Balance: <span class="fw-semibold">$298.16</span></p>
+              </div>
             </div>
           </div>
         </div>

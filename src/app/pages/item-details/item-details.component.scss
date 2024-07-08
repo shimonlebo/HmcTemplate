@@ -1,7 +1,8 @@
 .settings-menu {
   //margin-top: -1rem;
   left: 0;
-  top: 65px;
+  //top: 65px;
+  top: -70px;
 }
 
 .form-group {
@@ -43,9 +44,9 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #f0f0f0;
-  width: 40px;
-  cursor: pointer;
+  background-color: #f8f8f8;
+  border-radius: 5px;
+  width: 40px;  
   padding: 5px;
 
   .vertical-text {
@@ -61,5 +62,6 @@
     font-size: 24px;
     height: 24px;
     width: 24px;
+    cursor: pointer;
   }
 }
