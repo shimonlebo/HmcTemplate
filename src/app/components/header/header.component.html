@@ -6,7 +6,14 @@
   <!-- Project name -->
   <h1 class="title" routerLink="/dashboard">HMCTemplate 1.0</h1>
   <!-- Company search list  -->
-  <app-search-list></app-search-list>
+  <!-- <app-search-list></app-search-list> -->
+  <app-select-search [items]="companies" (itemSelected)="onItemSelected($event)"></app-select-search>
+  <button mat-icon-button>
+    <mat-icon class="material-symbols-outlined">chevron_left</mat-icon>
+  </button>
+  <button mat-icon-button>
+    <mat-icon class="material-symbols-outlined">chevron_right</mat-icon>
+  </button>
   <!-- Nav items -->
   <app-nav-items></app-nav-items>
   <!-- Spacer to push profile to right -->

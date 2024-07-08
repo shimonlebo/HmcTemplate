@@ -1,0 +1,45 @@
+.dropdown-container {
+  position: relative;
+  z-index: 1050; /* Adjust this value as needed */
+}
+
+.dropdown-toggle::after {
+  margin-left: 0.5rem;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1060; /* Higher than the container */
+  display: none;
+  min-width: 10rem;
+  padding: 0.5rem 0;
+  background-color: #fff;
+  border: 1px solid rgba(0,0,0,.15);
+  border-radius: 0.25rem;
+
+  &.show {
+    display: block;
+  }
+}
+
+.dropdown-items-container {
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.dropdown-item {
+  cursor: pointer;
+}
+
+input {
+  width: fit-content;
+}
+
+::ng-deep .mdc-button__label {
+  display: grid;
+    place-items: center;
+    grid-auto-flow: column;
+    gap: .5rem;
+  }
