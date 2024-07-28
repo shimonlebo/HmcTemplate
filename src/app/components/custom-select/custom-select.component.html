@@ -1,0 +1,37 @@
+<!-- <div class="custom-select-wrapper">
+  <div class="custom-select" [class.open]="isOpen">
+    <div class="custom-select__trigger" (click)="toggleOpen()">
+      <span>{{ selectedOption ? selectedOption.label : placeholder }}</span>
+    </div>
+    <div class="custom-options">
+      @for (option of options; track $index) {
+      <span
+        class="custom-option"
+        [class.selected]="option === selectedOption"
+        (click)="onOptionSelected(option)"
+      >
+        {{ option.label }}
+      </span>
+    }
+    </div>
+  </div>
+</div> -->
+
+<button class="btn btn-icon shadow-sm" (click)="toggleOpen()" cdkOverlayOrigin #trigger="cdkOverlayOrigin">
+  Select item
+  <mat-icon class="material-symbols-outlined icon-sm">arrow_drop_down</mat-icon>
+</button>
+
+<ng-template
+  cdkConnectedOverlay
+  [cdkConnectedOverlayOrigin]="trigger"
+  [cdkConnectedOverlayOpen]="isOpen"
+  >
+  <ul class="dropdown-menu shadow">
+    <li><a class="dropdown-item" href="#">Action</a></li>
+    <li><a class="dropdown-item" href="#">Another action</a></li>
+    <li><a class="dropdown-item" href="#">Something else here</a></li>
+    <li><hr class="dropdown-divider"></li>
+    <li><a class="dropdown-item" href="#">Separated link</a></li>          
+  </ul>
+</ng-template>  

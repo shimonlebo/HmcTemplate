@@ -4,64 +4,58 @@
   <table class="table table-hover">
     <thead class="sticky-top">
       <tr>
+        <th class="min-w-auto">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="">
+          </div> 
+        </th>
         <th>
           <app-table-header [headerText]="'Button'" [addFilter]="true" [addSort]="true"></app-table-header>
         </th>
         <th>
           <app-table-header [headerText]="'Select'" [addFilter]="true" [addSort]="true"></app-table-header>
         </th>
-        <th >
+        <th>
           <app-table-header [headerText]="'Item Name'" [addFilter]="true" [addSort]="true"></app-table-header>
         </th>
-        <th >
-          <app-table-header [headerText]="'Item Name'" [addFilter]="true" [addSort]="true"></app-table-header>
+        <th>
+          <app-table-header [headerText]="'Text Input'" [addFilter]="true" [addSort]="true"></app-table-header>
         </th>
-        <th >
-          <app-table-header [headerText]="'Item Name'" [addFilter]="true" [addSort]="true"></app-table-header>
+        <th>
+          <app-table-header [headerText]="'Number Input'" [addFilter]="true" [addSort]="true"></app-table-header>
         </th>
-        <th >
-          <app-table-header [headerText]="'Item Name'" [addFilter]="true" [addSort]="true"></app-table-header>
-        </th>
-        <th class="text-body-secondary">Actions</th>
+        <th class="text-body-secondary text-center">Actions</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td>
-          <button class="btn btn-x-sm btn-outline-secondary">Send</button>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="">
+          </div>          
         </td>
         <td>
-          <select name="test" id="">
-            <option value="one">Test</option>
-            <option value="one">Test</option>
-            <option value="one">Test</option>
-            <option value="one">Test</option>
-          </select>
-          <!-- <div class="btn-group">
-            <button class="btn select-x-sm btn-outline-secondary dropdown-toggle">
-              Small button
-            </button>
-            <ul class="dropdown-menu d-none">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">Separated link</a></li>          
-            </ul>
-          </div>           -->
+          <button class="btn btn-icon shadow-sm">Send</button>
         </td>
         <td>
-          <button mat-button [matMenuTriggerFor]="menu">Menu</button>
-          <mat-menu #menu="matMenu">
-            <button mat-menu-item>Item 1</button>
-            <button mat-menu-item>Item 2</button>
-          </mat-menu>
+          <app-custom-select
+            [options]="[
+              {value: 'test1', label: 'Test 1'},
+              {value: 'test2', label: 'Test 2'},
+              {value: 'test3', label: 'Test 3'},
+              {value: 'test4', label: 'Test 4'}
+            ]"
+            placeholder="Select a test"
+            (selectionChange)="onSelectionChange($event)"
+          ></app-custom-select>
         </td>
-        <td>82133-EQUIPMENT REN</td>
-        <td>1</td>
-        <td>$20,436.91</td>
-        <td align="center">
-          <div class="d-flex">
+        <td>Expense Added</td>        
+        <td>
+          <input type="text" class="form-control form-control-sm">
+        </td>
+        <td><input type="number" class="form-control form-control-sm"></td>
+        <td>
+          <div class="d-flex justify-content-center">
             <button mat-icon-button class="mat-icon-btn-sm">
               <mat-icon class="material-symbols-outlined" color="primary">edit</mat-icon>
             </button>
@@ -72,14 +66,18 @@
         </td>
       </tr>
       <tr>
-        <td>#123900</td>
+        <td>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="">
+          </div>          
+        </td>
         <td>Wade Warren</td>
         <td>Expense Added</td>
         <td>82133-EQUIPMENT REN</td>
         <td>1</td>
         <td>$20,436.91</td>
-        <td align="center">
-          <div class="d-flex">
+        <td>
+          <div class="d-flex justify-content-center">
             <button mat-icon-button class="mat-icon-btn-sm">
               <mat-icon class="material-symbols-outlined" color="primary">edit</mat-icon>
             </button>
@@ -90,14 +88,18 @@
         </td>
       </tr>
       <tr>
-        <td>#123900</td>
+        <td>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="">
+          </div>          
+        </td>
         <td>Wade Warren</td>
         <td>Expense Added</td>
         <td>82133-EQUIPMENT REN</td>
         <td>1</td>
         <td>$20,436.91</td>
-        <td align="center">
-          <div class="d-flex">
+        <td>
+          <div class="d-flex justify-content-center">
             <button mat-icon-button class="mat-icon-btn-sm">
               <mat-icon class="material-symbols-outlined" color="primary">edit</mat-icon>
             </button>
@@ -108,14 +110,18 @@
         </td>
       </tr>
       <tr>
-        <td>#123900</td>
+        <td>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="">
+          </div>          
+        </td>
         <td>Wade Warren</td>
         <td>Expense Added</td>
         <td>82133-EQUIPMENT REN</td>
         <td>1</td>
         <td>$20,436.91</td>
-        <td align="center">
-          <div class="d-flex">
+        <td>
+          <div class="d-flex justify-content-center">
             <button mat-icon-button class="mat-icon-btn-sm">
               <mat-icon class="material-symbols-outlined" color="primary">edit</mat-icon>
             </button>
@@ -130,7 +136,9 @@
     @if (showFooter()) {
       <tfoot class="sticky-bottom">
         <tr>
-          <td colspan="100%" class="text-muted">Showing 1 to 9 of 3,9099 records.</td>
+          <td colspan="100%" class="text-muted">
+            <small>Showing 1 to 9 of 3,9099 records.</small>
+          </td>
         </tr>
       </tfoot>
     }    

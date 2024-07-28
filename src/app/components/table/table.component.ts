@@ -6,6 +6,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatMenuModule } from '@angular/material/menu';
 import { TableHeaderComponent } from './table-header/table-header.component';
+import { CustomSelectComponent } from '../custom-select/custom-select.component';
 
 @Component({
   selector: 'app-table',
@@ -16,7 +17,8 @@ import { TableHeaderComponent } from './table-header/table-header.component';
     MatButtonModule,
     MatDialogModule,
     MatMenuModule,
-    TableHeaderComponent
+    TableHeaderComponent,
+    CustomSelectComponent
   ],
   templateUrl: './table.component.html',
   styleUrl: './table.component.scss'
@@ -26,5 +28,8 @@ export class TableComponent {
   maxTableHeight = input<string>();
   addFilter = true;
   showFooter = input<boolean>(false);
-
+  
+  onSelectionChange(value: any) {
+    console.log('Selected value:', value);
+  }
 }
