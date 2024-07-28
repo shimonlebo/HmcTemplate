@@ -1,13 +1,15 @@
 import { Component, input, output } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
+import { OverlayModule } from '@angular/cdk/overlay'; 
 
 @Component({
   selector: 'app-table-header',
   standalone: true,
   imports: [
     MatIconModule,
-    MatButtonModule
+    MatButtonModule,
+    OverlayModule
   ],
   templateUrl: './table-header.component.html',
   styleUrl: './table-header.component.scss'

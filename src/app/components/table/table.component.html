@@ -5,10 +5,10 @@
     <thead class="sticky-top">
       <tr>
         <th>
-          <app-table-header [headerText]="'Item Name'" [addFilter]="true" [addSort]="true"></app-table-header>
+          <app-table-header [headerText]="'Button'" [addFilter]="true" [addSort]="true"></app-table-header>
         </th>
         <th>
-          <app-table-header [headerText]="'Item Name'" [addFilter]="true" [addSort]="true"></app-table-header>
+          <app-table-header [headerText]="'Select'" [addFilter]="true" [addSort]="true"></app-table-header>
         </th>
         <th >
           <app-table-header [headerText]="'Item Name'" [addFilter]="true" [addSort]="true"></app-table-header>
@@ -27,9 +27,36 @@
     </thead>
     <tbody>
       <tr>
-        <td>#123900</td>
-        <td>Wade Warren</td>
-        <td>Expense Added</td>
+        <td>
+          <button class="btn btn-x-sm btn-outline-secondary">Send</button>
+        </td>
+        <td>
+          <select name="test" id="">
+            <option value="one">Test</option>
+            <option value="one">Test</option>
+            <option value="one">Test</option>
+            <option value="one">Test</option>
+          </select>
+          <!-- <div class="btn-group">
+            <button class="btn select-x-sm btn-outline-secondary dropdown-toggle">
+              Small button
+            </button>
+            <ul class="dropdown-menu d-none">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Separated link</a></li>          
+            </ul>
+          </div>           -->
+        </td>
+        <td>
+          <button mat-button [matMenuTriggerFor]="menu">Menu</button>
+          <mat-menu #menu="matMenu">
+            <button mat-menu-item>Item 1</button>
+            <button mat-menu-item>Item 2</button>
+          </mat-menu>
+        </td>
         <td>82133-EQUIPMENT REN</td>
         <td>1</td>
         <td>$20,436.91</td>
@@ -100,5 +127,12 @@
       </tr>
       <!-- Add more rows as needed -->
     </tbody>
+    @if (showFooter()) {
+      <tfoot class="sticky-bottom">
+        <tr>
+          <td colspan="100%" class="text-muted">Showing 1 to 9 of 3,9099 records.</td>
+        </tr>
+      </tfoot>
+    }    
   </table>
 </div>
