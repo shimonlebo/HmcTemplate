@@ -1,23 +1,4 @@
-<!-- <div class="custom-select-wrapper">
-  <div class="custom-select" [class.open]="isOpen">
-    <div class="custom-select__trigger" (click)="toggleOpen()">
-      <span>{{ selectedOption ? selectedOption.label : placeholder }}</span>
-    </div>
-    <div class="custom-options">
-      @for (option of options; track $index) {
-      <span
-        class="custom-option"
-        [class.selected]="option === selectedOption"
-        (click)="onOptionSelected(option)"
-      >
-        {{ option.label }}
-      </span>
-    }
-    </div>
-  </div>
-</div> -->
-
-<button class="btn btn-icon shadow-sm" (click)="toggleOpen()" cdkOverlayOrigin #trigger="cdkOverlayOrigin">
+<button class="btn btn-x-sm dropdown-sm shadow-sm" (click)="toggleOpen()" cdkOverlayOrigin #trigger="cdkOverlayOrigin">
   Select item
   <mat-icon class="material-symbols-outlined icon-sm">arrow_drop_down</mat-icon>
 </button>

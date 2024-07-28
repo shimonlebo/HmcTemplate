@@ -154,14 +154,10 @@ button.mat-icon-btn-sm {
   font-size: .75rem;
 }
 
-.btn.btn-icon {
+.btn-x-sm {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-right: 0;
-  padding: .25rem .5rem;
-  font-size: .75rem;
-  //border: 1px solid #6c757d;
 
   &:active {
     border-color: #80aedd;
@@ -178,6 +174,14 @@ button.mat-icon-btn-sm {
   }
 }
 
+.btn-x-sm.dropdown-sm {
+  padding-right: 0 !important;
+}
+
 .min-w-auto {
   min-width: auto !important;
+}
+
+.badge.rounded-pill {
+  font-weight: normal;
 }

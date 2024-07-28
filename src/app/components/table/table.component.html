@@ -16,7 +16,7 @@
           <app-table-header [headerText]="'Select'" [addFilter]="true" [addSort]="true"></app-table-header>
         </th>
         <th>
-          <app-table-header [headerText]="'Item Name'" [addFilter]="true" [addSort]="true"></app-table-header>
+          <app-table-header [headerText]="'Tags'" [addFilter]="true" [addSort]="true"></app-table-header>
         </th>
         <th>
           <app-table-header [headerText]="'Text Input'" [addFilter]="true" [addSort]="true"></app-table-header>
@@ -35,21 +35,24 @@
           </div>          
         </td>
         <td>
-          <button class="btn btn-icon shadow-sm">Send</button>
+          <button class="btn btn-x-sm shadow-sm">Send</button>
         </td>
         <td>
-          <app-custom-select
-            [options]="[
-              {value: 'test1', label: 'Test 1'},
-              {value: 'test2', label: 'Test 2'},
-              {value: 'test3', label: 'Test 3'},
-              {value: 'test4', label: 'Test 4'}
-            ]"
-            placeholder="Select a test"
-            (selectionChange)="onSelectionChange($event)"
-          ></app-custom-select>
+          <app-custom-select></app-custom-select>
         </td>
-        <td>Expense Added</td>        
+        <td>
+          <div class="d-flex justify-content-between">
+            <div class="d-flex align-items-center overflow-auto">
+              <span class="badge rounded-pill text-bg-primary me-1">Primary</span>
+              <span class="badge rounded-pill text-bg-secondary me-1">Secondary</span>
+              <span class="badge rounded-pill text-bg-success me-1">Success</span>
+              <span class="badge rounded-pill text-bg-danger">Danger</span>
+            </div>
+            <button mat-icon-button class="mat-icon-btn-sm">
+              <mat-icon class="material-symbols-outlined" color="primary">add</mat-icon>
+            </button>
+          </div>
+        </td>        
         <td>
           <input type="text" class="form-control form-control-sm">
         </td>
